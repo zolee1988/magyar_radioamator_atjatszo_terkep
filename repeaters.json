@@ -34,5 +34,18 @@
     "mode": ["DMR"],
     "notes": "DMR ID: 216003, CC: 8",
     "status": "ACTIVE"
-  }
+  },
+  {
+  "callsign": "HG3RUB",
+  "qth": "Dombóvár",
+  "locator": "JN96BJ",
+  "rx_mhz": 439.3375,
+  "tx_mhz": 431.7375,
+  "shift_khz": -7600,
+  "tone": "CTCSS 186.2/186.2",
+  "mode": ["FM"],
+  "notes": "",
+  "status": "INACTIVE"
+}
+
 ]
