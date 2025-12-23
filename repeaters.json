@@ -1,97 +1,1900 @@
 [
-  { "callsign": "HG3RUB", "qth": "Dombóvár", "locator": "JN96BJ", "asl_m": 155, "rx_mhz": 439.3375, "tx_mhz": 431.7375, "shift_khz": -7600, "tone": "186.2/186.2", "cc": null, "mode": ["FM"], "notes": "", "status": "INACTIVE" },
   {
-  "callsign": "HG2RUK",
-  "qth": "Kab-hegy",
-  "locator": "JN87TB",
-  "asl_m": 599,
-  "rx_mhz": 438.3000,
-  "tx_mhz": 430.7000,
-  "shift_khz": -7600,
-  "tone": "",
-  "cc": 8,
-  "mode": ["DMR"],
-  "notes": "DMR ID: 216003",
-  "status": "ACTIVE"
-},
-  { "callsign": "HG4RUC", "qth": "Székesfehérvár", "locator": "JN97FE", "asl_m": 179, "rx_mhz": 438.7500, "tx_mhz": 431.1500, "shift_khz": -7600, "tone": "107.2/107.2", "cc": null, "mode": ["FM", "C4FM"], "notes": "Echolink: 247090", "status": "ACTIVE" },
+    "callsign": "HA2RVX",
+    "qth": "Kab-hegy",
+    "locator": "JN87TB",
+    "asl_m": 620,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
   {
-  "callsign": "HG4RUD",
-  "qth": "Velencei-tó (Nadap, Meleg-hegy)",
-  "locator": "JN97HG",
-  "asl_m": 367,
-  "rx_mhz": 438.2375,
-  "tx_mhz": 430.6375,
-  "shift_khz": -7600,
-  "tone": "",
-  "cc": 8,
-  "mode": ["DMR"],
-  "notes": "DMR ID: 216120",
-  "status": "ACTIVE"
-},
-
+    "callsign": "HG0RUA",
+    "qth": "Debrecen",
+    "locator": "KN07TM",
+    "asl_m": 157,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM",
+      "C4FM"
+    ],
+    "status": "ACTIVE",
+    "notes": "Echolink: 614970"
+  },
   {
-  "callsign": "HG0RVA",
-  "qth": "Debrecen",
-  "locator": "KN07TN",
-  "asl_m": 157,
-  "rx_mhz": 145.0000,
-  "tx_mhz": 145.6000,
-  "shift_khz": 600,
-  "tone": "131.8/131.8",
-  "cc": null,
-  "mode": ["FM", "C4FM"],
-  "notes": "Echolink: 406293",
-  "status": "ACTIVE"
-},
-
+    "callsign": "HG0RUB",
+    "qth": "Sátoraljaújhely",
+    "locator": "KN08TJ",
+    "asl_m": 530,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": "Echolink: 273404"
+  },
   {
-  "callsign": "HG0RUA",
-  "qth": "Debrecen",
-  "locator": "KN07TM",
-  "asl_m": 157,
-  "rx_mhz": 438.6250,
-  "tx_mhz": 431.0250,
-  "shift_khz": -7600,
-  "tone": "",
-  "cc": null,
-  "mode": ["FM", "C4FM"],
-  "notes": "",
-  "status": "ACTIVE"
-},
+    "callsign": "HG0RUV",
+    "qth": "Vészhelyzeti átjátszó",
+    "locator": "",
+    "asl_m": 0,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "INACTIVE",
+    "notes": ""
+  },
   {
-  "callsign": "HG0RUD",
-  "qth": "Debrecen",
-  "locator": "KN07TN",
-  "asl_m": 185,
-  "rx_mhz": 438.4250,
-  "tx_mhz": 430.8250,
-  "shift_khz": -7600,
-  "tone": "",
-  "cc": 8,
-  "mode": ["DMR"],
-  "notes": "DMR ID: 216803",
-  "status": "ACTIVE"
-},
-
-
-
+    "callsign": "HG0RVA",
+    "qth": "Debrecen",
+    "locator": "KN07TN",
+    "asl_m": 157,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM",
+      "C4FM"
+    ],
+    "status": "ACTIVE",
+    "notes": "Echolink: 406293"
+  },
   {
-  "callsign": "HG5RVB",
-  "qth": "Budapest (Svábhegy)",
-  "locator": "JN97LM",
-  "asl_m": 500,
-  "rx_mhz": 145.6000,
-  "tx_mhz": 145.0000,
-  "shift_khz": -600,
-  "tone": "",
-  "cc": null,
-  "mode": ["C4FM"],
-  "notes": "",
-  "status": "ACTIVE"
-}
-
-
-
-
+    "callsign": "HG0RVB",
+    "qth": "Nyíregyháza",
+    "locator": "KN07UX",
+    "asl_m": 145,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "INACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG1RUC",
+    "qth": "Szombathely",
+    "locator": "JN87HF",
+    "asl_m": 268,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": "Echolink: 567741"
+  },
+  {
+    "callsign": "HG1RUD",
+    "qth": "Győr (Nyúl-hegy)",
+    "locator": "JN87TN",
+    "asl_m": 310,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM",
+      "C4FM"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG1RVA",
+    "qth": "Zalaegerszeg",
+    "locator": "JN86JT",
+    "asl_m": 370,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM",
+      "C4FM"
+    ],
+    "status": "ACTIVE",
+    "notes": "Echolink: 501567"
+  },
+  {
+    "callsign": "HG1RVB",
+    "qth": "Sopron",
+    "locator": "JN87GP",
+    "asl_m": 484,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": "Echolink: 7649"
+  },
+  {
+    "callsign": "HG1RVD",
+    "qth": "Győr (Nyúl-hegy)",
+    "locator": "JN87TN",
+    "asl_m": 310,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": "Echolink: 939217"
+  },
+  {
+    "callsign": "HG2RUB",
+    "qth": "Esztergom (Vaskapu-hegy)",
+    "locator": "JN97JS",
+    "asl_m": 370,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": "Echolink: 150187"
+  },
+  {
+    "callsign": "HG2RUC",
+    "qth": "Kab-hegy",
+    "locator": "JN87TB",
+    "asl_m": 620,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": "Echolink: 946110"
+  },
+  {
+    "callsign": "HG2RUD",
+    "qth": "Balatonfűzfő",
+    "locator": "JN97AB",
+    "asl_m": 150,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "INACTIVE",
+    "notes": "Echolink: 932036"
+  },
+  {
+    "callsign": "HG2RVA",
+    "qth": "Kőrishegy (Bakony)",
+    "locator": "JN87VH",
+    "asl_m": 744,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": "Echolink: 496382"
+  },
+  {
+    "callsign": "HG2RVC",
+    "qth": "Dorog",
+    "locator": "JN97IR",
+    "asl_m": 168,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG2RVD",
+    "qth": "Esztergom (Vaskapu-hegy)",
+    "locator": "JN97JS",
+    "asl_m": 370,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": "Echolink: 185833"
+  },
+  {
+    "callsign": "HG2RVG",
+    "qth": "Tihany",
+    "locator": "JN86WV",
+    "asl_m": 281,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "INACTIVE",
+    "notes": "Echolink: 246807"
+  },
+  {
+    "callsign": "HG2RVX",
+    "qth": "Kab-hegy",
+    "locator": "JN87TB",
+    "asl_m": 620,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG3RUA",
+    "qth": "Siófok (Ságvár)",
+    "locator": "JN96BT",
+    "asl_m": 220,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": "Echolink: 406612"
+  },
+  {
+    "callsign": "HG3RUB",
+    "qth": "Dombóvár",
+    "locator": "JN96BJ",
+    "asl_m": 155,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "INACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG3RUC",
+    "qth": "Pécs (Tubes)",
+    "locator": "JN96CC",
+    "asl_m": 616,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": "Echolink: 48900"
+  },
+  {
+    "callsign": "HG3RVA",
+    "qth": "Pécs (Tubes)",
+    "locator": "JN96CC",
+    "asl_m": 616,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": "Echolink: 253657"
+  },
+  {
+    "callsign": "HG3RVB",
+    "qth": "Fonyód (Balaton)",
+    "locator": "JN86SR",
+    "asl_m": 243,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": "Echolink: 202467"
+  },
+  {
+    "callsign": "HG3RVC",
+    "qth": "Szekszárd",
+    "locator": "JN96II",
+    "asl_m": 296,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG3RVF",
+    "qth": "Kaposvár 2. (Igal)",
+    "locator": "JN86XN",
+    "asl_m": 336,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": "Echolink: 58700"
+  },
+  {
+    "callsign": "HG4RUA",
+    "qth": "Kőszárhegy (Polgárdi)",
+    "locator": "JN97DC",
+    "asl_m": 197,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG4RUC",
+    "qth": "Székesfehérvár",
+    "locator": "JN97FE",
+    "asl_m": 179,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM",
+      "C4FM"
+    ],
+    "status": "ACTIVE",
+    "notes": "Echolink: 247090"
+  },
+  {
+    "callsign": "HG5RHA",
+    "qth": "Budapest",
+    "locator": "JN97MN",
+    "asl_m": 437,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "INACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG5RUG",
+    "qth": "Budapest",
+    "locator": "JN97LM",
+    "asl_m": 495,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": "Echolink: 225722"
+  },
+  {
+    "callsign": "HG5RUX",
+    "qth": "Budapest",
+    "locator": "",
+    "asl_m": 0,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "INACTIVE",
+    "notes": "Echolink: 447262"
+  },
+  {
+    "callsign": "HG5RVA",
+    "qth": "Gerecse",
+    "locator": "JN97FQ",
+    "asl_m": 708,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG6RUA",
+    "qth": "Galyatető (Mátra)",
+    "locator": "JN97WV",
+    "asl_m": 1035,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM",
+      "C4FM"
+    ],
+    "status": "INACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG6RVA",
+    "qth": "Galyatető (Mátra)",
+    "locator": "JN97WV",
+    "asl_m": 1035,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG7RUB",
+    "qth": "Cegléd",
+    "locator": "JN97VE",
+    "asl_m": 136,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM",
+      "C4FM"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG7RUC",
+    "qth": "Dobogókő",
+    "locator": "JN97KR",
+    "asl_m": 740,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": "Echolink: 340930"
+  },
+  {
+    "callsign": "HG7RUE",
+    "qth": "Budapest (Széchenyi-hegy, TV-torony)",
+    "locator": "JN97LL",
+    "asl_m": 528,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "INACTIVE",
+    "notes": "Echolink: 567011"
+  },
+  {
+    "callsign": "HG7RUH",
+    "qth": "Nagy-Hideg-hegy",
+    "locator": "JN97LW",
+    "asl_m": 864,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG7RUI",
+    "qth": "Őrbottyán, Menyecske-hegy",
+    "locator": "JN97PQ",
+    "asl_m": 230,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG7RVA",
+    "qth": "Érd",
+    "locator": "JN97KK",
+    "asl_m": 260,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": "Echolink: 608207"
+  },
+  {
+    "callsign": "HG7RVC",
+    "qth": "Cegléd",
+    "locator": "JN97VE",
+    "asl_m": 136,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": "Echolink: 928127"
+  },
+  {
+    "callsign": "HG8RUA",
+    "qth": "Szeged",
+    "locator": "KN06BG",
+    "asl_m": 244,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM",
+      "C4FM"
+    ],
+    "status": "ACTIVE",
+    "notes": "Echolink: 456737"
+  },
+  {
+    "callsign": "HG8RUB",
+    "qth": "Békéscsaba",
+    "locator": "KN06NQ",
+    "asl_m": 107,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM",
+      "C4FM"
+    ],
+    "status": "ACTIVE",
+    "notes": "Echolink: 304308"
+  },
+  {
+    "callsign": "HG8RUC",
+    "qth": "Kiskunfélegyháza",
+    "locator": "JN96WQ",
+    "asl_m": 125,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG8RUD",
+    "qth": "Makó",
+    "locator": "KN06FF",
+    "asl_m": 110,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM",
+      "C4FM"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG8RVA",
+    "qth": "Kiskunfélegyháza",
+    "locator": "JN96WQ",
+    "asl_m": 125,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": "Echolink: 448398"
+  },
+  {
+    "callsign": "HG8RVB",
+    "qth": "Békéscsaba",
+    "locator": "KN06MQ",
+    "asl_m": 178,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "INACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG8RVC",
+    "qth": "Szeged",
+    "locator": "KN06BG",
+    "asl_m": 197,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": "Echolink: 456734"
+  },
+  {
+    "callsign": "HG8RVD",
+    "qth": "Tompa",
+    "locator": "JN96SE",
+    "asl_m": 158,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG8RVE",
+    "qth": "Gyula",
+    "locator": "KN06PP",
+    "asl_m": 115,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG9RUA",
+    "qth": "Kis-kőhát (Bükk)",
+    "locator": "KN08FB",
+    "asl_m": 979,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG9RUD",
+    "qth": "Ózd",
+    "locator": "KN08DF",
+    "asl_m": 252,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG9RUG",
+    "qth": "Kis-kőhát (Bükk)",
+    "locator": "KN08FB",
+    "asl_m": 976,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM",
+      "C4FM"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG9RVA",
+    "qth": "Kis-kőhát (Bükk)",
+    "locator": "KN08FB",
+    "asl_m": 976,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": "Echolink: 382993"
+  },
+  {
+    "callsign": "HG9RVB",
+    "qth": "Miskolc (Bükkszentkereszt)",
+    "locator": "KN08HB",
+    "asl_m": 732,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": "Echolink: 424421"
+  },
+  {
+    "callsign": "HG9RVC",
+    "qth": "Sátoraljaújhely",
+    "locator": "KN08TJ",
+    "asl_m": 558,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "ACTIVE",
+    "notes": "Echolink: 411830"
+  },
+  {
+    "callsign": "HG9RVD",
+    "qth": "Ózd",
+    "locator": "KN08DF",
+    "asl_m": 293,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM"
+    ],
+    "status": "INACTIVE",
+    "notes": "Echolink: 428776"
+  },
+  {
+    "callsign": "HG0RUD",
+    "qth": "Debrecen",
+    "locator": "KN07TN",
+    "asl_m": 185,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": 8,
+    "mode": [
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": "DMR ID: 216803"
+  },
+  {
+    "callsign": "HG1RUA",
+    "qth": "Zalaegerszeg",
+    "locator": "JN86JT",
+    "asl_m": 370,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": 8,
+    "mode": [
+      "C4FM",
+      "D-Star",
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": "DMR ID: 216106"
+  },
+  {
+    "callsign": "HG1RUB",
+    "qth": "Sopron",
+    "locator": "JN87GP",
+    "asl_m": 432,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": 8,
+    "mode": [
+      "C4FM",
+      "D-Star",
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": "DMR ID: 216108"
+  },
+  {
+    "callsign": "HG1RUE",
+    "qth": "Győr (Nyúl-hegy)",
+    "locator": "JN87TN",
+    "asl_m": 350,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": 8,
+    "mode": [
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": "DMR ID: 216102"
+  },
+  {
+    "callsign": "HG1RUG",
+    "qth": "Győr",
+    "locator": "JN87TQ",
+    "asl_m": 155,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": 8,
+    "mode": [
+      "C4FM",
+      "D-Star",
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": "DMR ID: 216001"
+  },
+  {
+    "callsign": "HG1RUI",
+    "qth": "Alpokalja",
+    "locator": "JN87FJ",
+    "asl_m": 670,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": 8,
+    "mode": [
+      "C4FM",
+      "D-Star",
+      "DMR"
+    ],
+    "status": "INACTIVE",
+    "notes": "DMR ID: 216105"
+  },
+  {
+    "callsign": "HG1RUJ",
+    "qth": "Szombathely",
+    "locator": "JN87HF",
+    "asl_m": 291,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": 8,
+    "mode": [
+      "C4FM",
+      "D-Star",
+      "DMR"
+    ],
+    "status": "INACTIVE",
+    "notes": "DMR ID: 216107"
+  },
+  {
+    "callsign": "HG2RUE",
+    "qth": "Kab-hegy",
+    "locator": "JN87TB",
+    "asl_m": 680,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": 8,
+    "mode": [
+      "DMR"
+    ],
+    "status": "INACTIVE",
+    "notes": "DMR ID: 216101"
+  },
+  {
+    "callsign": "HG2RUG",
+    "qth": "Gerecse",
+    "locator": "JN97FQ",
+    "asl_m": 708,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": 8,
+    "mode": [
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": "DMR ID: 216110"
+  },
+  {
+    "callsign": "HG2RUI",
+    "qth": "Esztergom (Vaskapu-hegy)",
+    "locator": "JN97JS",
+    "asl_m": 400,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": 8,
+    "mode": [
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": "DMR ID: 216104"
+  },
+  {
+    "callsign": "HG2RUJ",
+    "qth": "Tatabánya",
+    "locator": "JN97FN",
+    "asl_m": 200,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": 8,
+    "mode": [
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": "DMR ID: 216109"
+  },
+  {
+    "callsign": "HG2RUK",
+    "qth": "Kab-hegy",
+    "locator": "JN87TB",
+    "asl_m": 620,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": 8,
+    "mode": [
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": "DMR ID: 216003"
+  },
+  {
+    "callsign": "HG3RUF",
+    "qth": "Gyugypuszta",
+    "locator": "JN86XT",
+    "asl_m": 330,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": 8,
+    "mode": [
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": "DMR ID: 216303"
+  },
+  {
+    "callsign": "HG3RUG",
+    "qth": "Pécs (Hosszúhetény, Hármashegy)",
+    "locator": "JN96EE",
+    "asl_m": 625,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": 8,
+    "mode": [
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": "DMR ID: 216301"
+  },
+  {
+    "callsign": "HG4RUD",
+    "qth": "Velencei-tó (Nadap, Meleg-hegy)",
+    "locator": "JN97HG",
+    "asl_m": 367,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": 8,
+    "mode": [
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": "DMR ID: 216120"
+  },
+  {
+    "callsign": "HG5RUC",
+    "qth": "Budapest",
+    "locator": "JN97LM",
+    "asl_m": 528,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": 8,
+    "mode": [
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": "DMR ID: 216502"
+  },
+  {
+    "callsign": "HG6RUC",
+    "qth": "Kékestető",
+    "locator": "KN07AU",
+    "asl_m": 1037,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": 8,
+    "mode": [
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": "DMR ID: 216710"
+  },
+  {
+    "callsign": "HG6RUD",
+    "qth": "Hatvan",
+    "locator": "JN97UQ",
+    "asl_m": 188,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": 8,
+    "mode": [
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": "DMR ID: 216760"
+  },
+  {
+    "callsign": "HG7RUA",
+    "qth": "Érd",
+    "locator": "JN97KK",
+    "asl_m": 268,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": 8,
+    "mode": [
+      "C4FM",
+      "D-Star",
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": "DMR ID: 216703"
+  },
+  {
+    "callsign": "HG7RUG",
+    "qth": "Dobogókő",
+    "locator": "JN97KR",
+    "asl_m": 750,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": 8,
+    "mode": [
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": "DMR ID: 216702"
+  },
+  {
+    "callsign": "HG7RUJ",
+    "qth": "Őrbottyán, Menyecske-hegy",
+    "locator": "JN97PQ",
+    "asl_m": 232,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": 8,
+    "mode": [
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": "DMR ID: 216002"
+  },
+  {
+    "callsign": "HG8RUE",
+    "qth": "Gyula",
+    "locator": "KN06PP",
+    "asl_m": 141,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": 9,
+    "mode": [
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": "DMR ID: 216801"
+  },
+  {
+    "callsign": "HG8RUF",
+    "qth": "Szeged",
+    "locator": "KN06BG",
+    "asl_m": 215,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": 8,
+    "mode": [
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": "DMR ID: 216810"
+  },
+  {
+    "callsign": "HG8RUG",
+    "qth": "Sarkad",
+    "locator": "KN06QR",
+    "asl_m": 113,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": 9,
+    "mode": [
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": "DMR ID: 216811"
+  },
+  {
+    "callsign": "HG8RUH",
+    "qth": "Csongrád",
+    "locator": "KN06BQ",
+    "asl_m": 105,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": 9,
+    "mode": [
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": "DMR ID: 216888"
+  },
+  {
+    "callsign": "HG8RUI",
+    "qth": "Rém",
+    "locator": "JN96NG",
+    "asl_m": 185,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": 8,
+    "mode": [
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": "DMR ID: 216804"
+  },
+  {
+    "callsign": "HG9RUE",
+    "qth": "Kis-kőhát (Bükk)",
+    "locator": "KN08FB",
+    "asl_m": 978,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": 8,
+    "mode": [
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": "DMR ID: 216790"
+  },
+  {
+    "callsign": "HG0RUA",
+    "qth": "Debrecen",
+    "locator": "KN07TM",
+    "asl_m": 157,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM",
+      "C4FM"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG0RVA",
+    "qth": "Debrecen",
+    "locator": "KN07TN",
+    "asl_m": 157,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM",
+      "C4FM"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG1RUA",
+    "qth": "Zalaegerszeg",
+    "locator": "JN86JT",
+    "asl_m": 370,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "C4FM",
+      "D-Star",
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG1RUB",
+    "qth": "Sopron",
+    "locator": "JN87GP",
+    "asl_m": 432,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "C4FM",
+      "D-Star",
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG1RUD",
+    "qth": "Győr (Nyúl-hegy)",
+    "locator": "JN87TN",
+    "asl_m": 310,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM",
+      "C4FM"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG1RUG",
+    "qth": "Győr",
+    "locator": "JN87TQ",
+    "asl_m": 155,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "C4FM",
+      "D-Star",
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG1RUI",
+    "qth": "Alpokalja",
+    "locator": "JN87FJ",
+    "asl_m": 670,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "C4FM",
+      "D-Star",
+      "DMR"
+    ],
+    "status": "INACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG1RUJ",
+    "qth": "Szombathely",
+    "locator": "JN87HF",
+    "asl_m": 291,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "C4FM",
+      "D-Star",
+      "DMR"
+    ],
+    "status": "INACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG1RVA",
+    "qth": "Zalaegerszeg",
+    "locator": "JN86JT",
+    "asl_m": 370,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM",
+      "C4FM"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG4RUC",
+    "qth": "Székesfehérvár",
+    "locator": "JN97FE",
+    "asl_m": 179,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM",
+      "C4FM"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG5RUA",
+    "qth": "Budapest",
+    "locator": "JN97MN",
+    "asl_m": 477,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "C4FM"
+    ],
+    "status": "INACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG5RVB",
+    "qth": "Budapest (Svábhegy)",
+    "locator": "JN97LM",
+    "asl_m": 500,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "C4FM"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG6RUA",
+    "qth": "Galyatető (Mátra)",
+    "locator": "JN97WV",
+    "asl_m": 1035,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM",
+      "C4FM"
+    ],
+    "status": "INACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG7RUA",
+    "qth": "Érd",
+    "locator": "JN97KK",
+    "asl_m": 268,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "C4FM",
+      "D-Star",
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG7RUB",
+    "qth": "Cegléd",
+    "locator": "JN97VE",
+    "asl_m": 136,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM",
+      "C4FM"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG8RUA",
+    "qth": "Szeged",
+    "locator": "KN06BG",
+    "asl_m": 244,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM",
+      "C4FM"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG8RUB",
+    "qth": "Békéscsaba",
+    "locator": "KN06NQ",
+    "asl_m": 107,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM",
+      "C4FM"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG8RUD",
+    "qth": "Makó",
+    "locator": "KN06FF",
+    "asl_m": 110,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM",
+      "C4FM"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG9RUG",
+    "qth": "Kis-kőhát (Bükk)",
+    "locator": "KN08FB",
+    "asl_m": 976,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "FM",
+      "C4FM"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG1RUA",
+    "qth": "Zalaegerszeg",
+    "locator": "JN86JT",
+    "asl_m": 370,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "C4FM",
+      "D-Star",
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG1RUB",
+    "qth": "Sopron",
+    "locator": "JN87GP",
+    "asl_m": 432,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "C4FM",
+      "D-Star",
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG1RUG",
+    "qth": "Győr",
+    "locator": "JN87TQ",
+    "asl_m": 155,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "C4FM",
+      "D-Star",
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG1RUI",
+    "qth": "Alpokalja",
+    "locator": "JN87FJ",
+    "asl_m": 670,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "C4FM",
+      "D-Star",
+      "DMR"
+    ],
+    "status": "INACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG1RUJ",
+    "qth": "Szombathely",
+    "locator": "JN87HF",
+    "asl_m": 291,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "C4FM",
+      "D-Star",
+      "DMR"
+    ],
+    "status": "INACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG2RUF",
+    "qth": "Gerecse",
+    "locator": "JN97FQ",
+    "asl_m": 713,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "D-Star"
+    ],
+    "status": "INACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG3RUE",
+    "qth": "Fonyód (Balaton)",
+    "locator": "JN86SR",
+    "asl_m": 263,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "D-Star"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG5RUD",
+    "qth": "Budapest",
+    "locator": "JN97LM",
+    "asl_m": 437,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "D-Star"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG6RUB",
+    "qth": "Galyatető (Mátra)",
+    "locator": "JN97WV",
+    "asl_m": 1035,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "D-Star"
+    ],
+    "status": "INACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG7RUA",
+    "qth": "Érd",
+    "locator": "JN97KK",
+    "asl_m": 268,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "C4FM",
+      "D-Star",
+      "DMR"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG7RUD",
+    "qth": "Vác, Naszály",
+    "locator": "JN97NU",
+    "asl_m": 517,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "D-Star"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  },
+  {
+    "callsign": "HG7RUF",
+    "qth": "Érd",
+    "locator": "JN97KJ",
+    "asl_m": 235,
+    "rx_khz": null,
+    "tx_khz": null,
+    "shift_khz": null,
+    "tone": null,
+    "cc": null,
+    "mode": [
+      "D-Star"
+    ],
+    "status": "ACTIVE",
+    "notes": ""
+  }
 ]
