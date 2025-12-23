@@ -14,7 +14,7 @@ const icons = {
   dig_inactive: L.icon({ iconUrl: 'icons/digital_inactive.svg', iconSize: [32, 32] })
 };
 
-// Ikonválasztás
+// Ikonválasztás (FM prioritás)
 function pickIcon(rep) {
   const modes = rep.mode.map(m => m.toUpperCase());
   const isActive = rep.status.toUpperCase() === "ACTIVE";
@@ -32,6 +32,7 @@ function pickIcon(rep) {
 fetch("repeaters.json")
   .then(r => r.json())
   .then(list => {
+    console.log("Betöltött átjátszók:", list.length);
 
     const markers = L.markerClusterGroup();
     const allMarkers = [];
@@ -39,14 +40,19 @@ fetch("repeaters.json")
     // Lokátor duplikátumok
     const locatorGroups = {};
     list.forEach(rep => {
-      if (!locatorGroups[rep.locator]) locatorGroups[rep.locator] = [];
+      if (!locatorGroups[rep.locator]) {
+        locatorGroups[rep.locator] = [];
+      }
       locatorGroups[rep.locator].push(rep);
     });
 
     list.forEach(rep => {
-
+      // Lokátorból koordináta
       let { lat, lon } = locatorToLatLon(rep.locator);
-      if (!lat || !lon || isNaN(lat) || isNaN(lon)) return;
+      if (!lat || !lon || isNaN(lat) || isNaN(lon)) {
+        console.warn("Hibás lokátor:", rep.callsign, rep.locator);
+        return;
+      }
 
       // Duplikált lokátor eltolása
       const group = locatorGroups[rep.locator];
@@ -60,8 +66,8 @@ fetch("repeaters.json")
 
       const isActive = rep.status.toUpperCase() === "ACTIVE";
       const statusHu = isActive
-        ? '<span style="color: green;">aktív</span>'
-        : '<span style="color: red;">inaktív</span>';
+        ? '<span style="color: #00ff4c;">aktív</span>'
+        : '<span style="color: #ff3b3b;">inaktív</span>';
 
       const modes = rep.mode.map(m => m.toUpperCase());
       const hasFM = modes.includes("FM") || modes.includes("ANALOG");
@@ -70,14 +76,14 @@ fetch("repeaters.json")
       let toneOrCc = "";
       if (hasFM && rep.tone) {
         toneOrCc = `<b>CTCSS DL/UL [Hz]:</b> ${rep.tone}<br>`;
-      } else if (hasDigital && rep.cc !== null) {
+      } else if (hasDigital && rep.cc !== null && rep.cc !== undefined) {
         toneOrCc = `<b>CC:</b> ${rep.cc}<br>`;
       }
 
       const ha2toLink = `http://ha2to.orbel.hu/content/repeaters/hu/${rep.callsign}.html`;
 
       const popupHtml = `
-        <div style="font-family: Arial; font-size: 13px; line-height: 1.4;">
+        <div style="font-family: Arial, sans-serif; font-size: 13px; line-height: 1.4;">
           <div style="font-size: 16px; font-weight: bold; margin-bottom: 4px;">
             <a href="${ha2toLink}" target="_blank" style="color: #0066cc; text-decoration: none;">
               ${rep.callsign}
@@ -86,8 +92,10 @@ fetch("repeaters.json")
 
           <div style="margin-bottom: 6px;">${rep.qth}</div>
 
-          <b>Lokátor:</b> ${rep.locator}<br>
-          <b>ASL:</b> ${rep.asl_m} m
+          <div style="margin-bottom: 8px;">
+            <b>Lokátor:</b> ${rep.locator}<br>
+            <b>ASL:</b> ${rep.asl_m} m
+          </div>
 
           <div style="border-top: 1px solid #ccc; margin: 6px 0;"></div>
 
@@ -113,7 +121,7 @@ fetch("repeaters.json")
       markers.addLayer(marker);
     });
 
-    // Szűrő funkció
+    // SZŰRŐ LOGIKA
     function applyFilters() {
       const showActive = document.getElementById("filterActive").checked;
       const showInactive = document.getElementById("filterInactive").checked;
@@ -130,9 +138,11 @@ fetch("repeaters.json")
         const isAnalog = modes.includes("FM") || modes.includes("ANALOG");
         const isDigital = modes.some(m => ["DMR", "C4FM", "DSTAR", "DIGITAL"].includes(m));
 
+        // Aktív / inaktív szűrés
         if (!isActive && !showInactive) return;
         if (isActive && !showActive) return;
 
+        // Analóg / digitális szűrés – elég, ha legalább egy engedélyezett
         const analogAllowed = !isAnalog || showAnalog;
         const digitalAllowed = !isDigital || showDigital;
 
@@ -142,11 +152,13 @@ fetch("repeaters.json")
       });
     }
 
-    // Szűrő események (ÚJ helyes selector!)
-    document.querySelectorAll("#bottomPanel input").forEach(cb => {
+    // SZŰRŐ ESEMÉNYEK – az új panelre mutat
+    document.querySelectorAll("#bottomPanel input[type='checkbox']").forEach(cb => {
       cb.addEventListener("change", applyFilters);
     });
 
     map.addLayer(markers);
   })
-  .catch(err => console.error("Hiba a JSON betöltésekor:", err));
+  .catch(err => {
+    console.error("Hiba a JSON betöltésekor:", err);
+  });
