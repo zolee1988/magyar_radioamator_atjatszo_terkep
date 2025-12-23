@@ -11,4 +11,28 @@
     "notes": "Echolink: 496382",
     "status": "ACTIVE"
   },
+  {
+    "callsign": "HG4RUC",
+    "qth": "Székesfehérvár",
+    "locator": "JN97FE",
+    "rx_mhz": 438.7500,
+    "tx_mhz": 431.1500,
+    "shift_khz": -7600,
+    "tone": "CTCSS 107.2",
+    "mode": ["ANALOG", "C4FM"],
+    "notes": "Echolink: 247090",
+    "status": "ACTIVE"
+  },
+  {
+    "callsign": "HG2RUK",
+    "qth": "Kab-hegy",
+    "locator": "JN87TB",
+    "rx_mhz": 438.3000,
+    "tx_mhz": 430.7000,
+    "shift_khz": -7600,
+    "tone": "",
+    "mode": ["DMR"],
+    "notes": "DMR ID: 216003, CC: 8",
+    "status": "ACTIVE"
+  }
 ]
