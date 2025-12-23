@@ -8,24 +8,14 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // Ikonok
 const icons = {
-  FM:     L.icon({ iconUrl: 'icons/fm.svg', iconSize: [32, 32] }),
-  DMR:    L.icon({ iconUrl: 'icons/dmr.svg', iconSize: [32, 32] }),
-  C4FM:   L.icon({ iconUrl: 'icons/c4fm.svg', iconSize: [32, 32] }),
-  DSTAR:  L.icon({ iconUrl: 'icons/dstar.svg', iconSize: [32, 32] })
+  fm_active: L.icon({ iconUrl: 'icons/fm_active.svg', iconSize: [32, 32] }),
+  fm_inactive: L.icon({ iconUrl: 'icons/fm_inactive.svg', iconSize: [32, 32] }),
+  dig_active: L.icon({ iconUrl: 'icons/digital_active.svg', iconSize: [32, 32] }),
+  dig_inactive: L.icon({ iconUrl: 'icons/digital_inactive.svg', iconSize: [32, 32] })
 };
 
 // Mód alapján ikon választása
-function pickIcon(modes) {
-  if (!modes || modes.length === 0) return icons.FM;
-
-  const upper = modes.map(m => m.toUpperCase());
-
-  if (upper.includes("DMR")) return icons.DMR;
-  if (upper.includes("C4FM")) return icons.C4FM;
-  if (upper.includes("DSTAR")) return icons.DSTAR;
-
-  return icons.FM;
-}
+function pickIcon(rep) { const isDigital = rep.mode.some(m => ["DMR", "C4FM", "DSTAR", "DIGITAL"].includes(m.toUpperCase())); const isActive = rep.status.toUpperCase() === "ACTIVE"; if (isDigital) { return isActive ? icons.dig_active : icons.dig_inactive; } else { return isActive ? icons.fm_active : icons.fm_inactive; } }
 
 // JSON betöltése
 fetch("repeaters.json")
@@ -41,7 +31,7 @@ fetch("repeaters.json")
         return;
       }
 
-      L.marker([lat, lon], { icon: pickIcon(rep.mode) })
+      L.marker([lat, lon], { icon: pickIcon(rep) })
         .addTo(map)
         .bindPopup(`
           <b>${rep.callsign}</b><br>
