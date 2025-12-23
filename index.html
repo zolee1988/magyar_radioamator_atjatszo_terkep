@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
-<link rel="alternate icon" type="image/png" href="icons/favicon.png">
-
   <meta charset="UTF-8">
   <title>Magyar Rádióamatőr Átjátszó Térkép</title>
+
+  <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="icons/favicon.png">
+
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
 <div class="header">
   <div class="title">Magyarországi VHF és UHF rádióamatőr átjátszók térképe</div>
   <div class="subtitle">készítette HG4ZKZ Zoli, HA2TO Árpi adatbázisa alapján</div>
@@ -20,35 +22,32 @@
   <div class="updated">Utolsó frissítés: 2025.12.23 teszt, nincs kész</div>
 </div>
 
-  
-  <div id="map"></div>
+<div id="map"></div>
 
-  <div id="filters">
-  <b>Szűrők</b><br>
-  <label><input type="checkbox" id="filterActive" checked> Aktív</label><br>
-  <label><input type="checkbox" id="filterInactive" checked> Inaktív</label><br>
-  <label><input type="checkbox" id="filterAnalog" checked> Analóg</label><br>
-  <label><input type="checkbox" id="filterDigital" checked> Digitális</label>
+<!-- ÚJ közös alsó panel -->
+<div id="bottomPanel">
+  <div class="legend">
+    <b>Jelmagyarázat</b><br>
+    <span class="dot active"></span> aktív<br>
+    <span class="dot inactive"></span> inaktív<br>
+    <b>A</b> analóg (FM)<br>
+    <b>D</b> digitális (DMR / C4FM / D‑STAR)
   </div>
 
-
-  <div id="legend">
-  <b>Jelmagyarázat</b><br>
-  <span style="color: green;">●</span> aktív<br>
-  <span style="color: red;">●</span> inaktív<br>
-  <b>A</b> analóg (FM)<br>
-  <b>D</b> digitális (DMR / C4FM / D‑STAR)
+  <div class="filters">
+    <b>Szűrők</b><br>
+    <label><input type="checkbox" id="filterActive" checked> Aktív</label><br>
+    <label><input type="checkbox" id="filterInactive" checked> Inaktív</label><br>
+    <label><input type="checkbox" id="filterAnalog" checked> Analóg</label><br>
+    <label><input type="checkbox" id="filterDigital" checked> Digitális</label>
   </div>
+</div>
 
-
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="locator.js"></script>
-  <script src="map.js"></script>
-
-  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
-<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
 
-  
+<script src="locator.js"></script>
+<script src="map.js"></script>
+
 </body>
 </html>
