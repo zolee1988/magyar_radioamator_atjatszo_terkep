@@ -24,7 +24,7 @@ function pickIcon(modes) {
   if (upper.includes("C4FM")) return icons.C4FM;
   if (upper.includes("DSTAR")) return icons.DSTAR;
 
-  return icons.ANALOG;
+  return icons.FM;
 }
 
 // JSON betöltése
