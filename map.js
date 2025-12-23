@@ -42,6 +42,9 @@ fetch("repeaters.json")
     // --- MARKERCLUSTER CSOPORT ---
     const markers = L.markerClusterGroup();
 
+    // --- ÖSSZES MARKER TÁROLÁSA SZŰRÉSHEZ ---
+    const allMarkers = [];
+
     // --- LOKÁTOR DUPLIKÁTUMOK KEZELÉSE ---
     const locatorGroups = {};
     list.forEach(rep => {
@@ -134,11 +137,46 @@ fetch("repeaters.json")
         </div>
       `;
 
-      // --- MARKERCLUSTER: marker hozzáadása ---
+      // --- MARKER LÉTREHOZÁSA ---
       const marker = L.marker([lat, lon], { icon: pickIcon(rep) })
         .bindPopup(popupHtml);
 
+      // --- MARKER TÁROLÁSA SZŰRÉSHEZ ---
+      allMarkers.push({ marker, rep });
+
+      // --- MARKER HOZZÁADÁSA A CLUSTERHEZ ---
       markers.addLayer(marker);
+    });
+
+    // --- SZŰRŐ FUNKCIÓ ---
+    function applyFilters() {
+      const showActive = document.getElementById("filterActive").checked;
+      const showInactive = document.getElementById("filterInactive").checked;
+      const showAnalog = document.getElementById("filterAnalog").checked;
+      const showDigital = document.getElementById("filterDigital").checked;
+
+      markers.clearLayers();
+
+      allMarkers.forEach(obj => {
+        const rep = obj.rep;
+
+        const isActive = rep.status.toUpperCase() === "ACTIVE";
+        const modes = rep.mode.map(m => m.toUpperCase());
+        const isAnalog = modes.includes("FM") || modes.includes("ANALOG");
+        const isDigital = modes.some(m => ["DMR", "C4FM", "DSTAR", "DIGITAL"].includes(m));
+
+        if (!isActive && !showInactive) return;
+        if (isActive && !showActive) return;
+        if (isAnalog && !showAnalog) return;
+        if (isDigital && !showDigital) return;
+
+        markers.addLayer(obj.marker);
+      });
+    }
+
+    // --- SZŰRŐ ESEMÉNYEK ---
+    document.querySelectorAll("#filters input").forEach(cb => {
+      cb.addEventListener("change", applyFilters);
     });
 
     // --- CLUSTER HOZZÁADÁSA A TÉRKÉPHEZ ---
