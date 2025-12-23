@@ -1,0 +1,15 @@
+[
+  {
+    "callsign": "HG2RVA",
+    "qth": "Kőrishegy (Bakony)",
+    "locator": "JN87VH",
+    "rx_mhz": 145.7125,
+    "tx_mhz": 145.1125,
+    "shift_khz": -600,
+    "tone": "CTCSS 107.2",
+    "mode": ["ANALOG"],
+    "notes": "Echolink: 496382",
+    "status": "ACTIVE"
+  },
+  ...
+]
