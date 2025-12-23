@@ -106,11 +106,59 @@ html, body {
   margin-right: 4px;
 }
 
-/* Mobilbarát elrendezés */
+/* --- Popup mobilbarát méretezés --- */
 @media (max-width: 600px) {
+  .leaflet-popup-content {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .leaflet-popup-content a {
+    font-size: 18px !important;
+  }
+
+  .leaflet-popup-content-wrapper {
+    padding: 18px !important;
+  }
+
+  .leaflet-popup-tip {
+    width: 16px !important;
+    height: 16px !important;
+  }
+}
+
+/* --- Mobilbarát elrendezés és nagyobb méretek --- */
+@media (max-width: 600px) {
+
+  /* Fejléc */
+  .header {
+    padding: 14px 20px;
+  }
+
+  .header .title {
+    font-size: 22px;
+  }
+
+  .header .subtitle,
+  .header .source,
+  .header .updated {
+    font-size: 15px;
+  }
+
+  /* Alsó panel */
   #bottomPanel {
     flex-direction: column;
     gap: 20px;
-    padding: 12px 16px;
+    padding: 16px 20px;
+    font-size: 16px;
+  }
+
+  #bottomPanel input[type="checkbox"] {
+    transform: scale(1.4);
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
   }
 }
