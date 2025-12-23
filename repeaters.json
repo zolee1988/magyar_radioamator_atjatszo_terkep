@@ -6,8 +6,8 @@
     "rx_mhz": 145.7125,
     "tx_mhz": 145.1125,
     "shift_khz": -600,
-    "tone": "CTCSS 107.2",
-    "mode": ["ANALOG"],
+    "tone": "CTCSS 107.2/107.2",
+    "mode": ["FM"],
     "notes": "Echolink: 496382",
     "status": "ACTIVE"
   },
@@ -19,7 +19,7 @@
     "tx_mhz": 431.1500,
     "shift_khz": -7600,
     "tone": "CTCSS 107.2",
-    "mode": ["ANALOG", "C4FM"],
+    "mode": ["FM", "C4FM"],
     "notes": "Echolink: 247090",
     "status": "ACTIVE"
   },
