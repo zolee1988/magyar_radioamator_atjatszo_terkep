@@ -23,14 +23,22 @@
   
   <div id="map"></div>
 
-  <div id="legend">
+  <div id="filters">
+  <b>Szűrők</b><br>
+  <label><input type="checkbox" id="filterActive" checked> Aktív</label><br>
+  <label><input type="checkbox" id="filterInactive" checked> Inaktív</label><br>
+  <label><input type="checkbox" id="filterAnalog" checked> Analóg</label><br>
+  <label><input type="checkbox" id="filterDigital" checked> Digitális</label>
+  </div>
 
+
+  <div id="legend">
   <b>Jelmagyarázat</b><br>
   <span style="color: green;">●</span> aktív<br>
   <span style="color: red;">●</span> inaktív<br>
   <b>A</b> analóg (FM)<br>
   <b>D</b> digitális (DMR / C4FM / D‑STAR)
-</div>
+  </div>
 
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
