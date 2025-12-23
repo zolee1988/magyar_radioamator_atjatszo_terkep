@@ -4,16 +4,16 @@
     "qth": "Kab-hegy",
     "locator": "JN87TB",
     "asl_m": 620,
-    "rx_khz": null,
-    "tx_khz": null,
+    "rx_khz": 70475.0,
+    "tx_khz": 70475.0,
     "shift_khz": null,
-    "tone": null,
+    "tone": 107.2/--,
     "cc": null,
     "mode": [
       "FM"
     ],
     "status": "ACTIVE",
-    "notes": ""
+    "notes": "Keresztsávos retranszlációs átjátszó. A másik oldal a HG2RVX."
   },
   {
     "callsign": "HG0RUA",
