@@ -4,10 +4,10 @@
     "qth": "Kab-hegy",
     "locator": "JN87TB",
     "asl_m": 620,
-    "rx_khz": 70475.0,
-    "tx_khz": 70475.0,
+    "rx_khz": "70475.0",
+    "tx_khz": "70475.0",
     "shift_khz": null,
-    "tone": 107.2/--,
+    "tone": "107.2/--",
     "cc": null,
     "mode": [
       "FM"
