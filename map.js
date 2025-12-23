@@ -67,21 +67,53 @@ fetch("repeaters.json")
       }
 
       // Popup HTML
-      const popupHtml = `
-        <b>${rep.callsign}</b><br>
-        ${rep.qth}<br><br>
+      const ha2toLink = `http://ha2to.orbel.hu/content/repeaters/hu/${rep.callsign}.html`;
 
-        <b>RX:</b> ${rep.rx_mhz} MHz<br>
-        <b>TX:</b> ${rep.tx_mhz} MHz<br>
-        <b>Shift:</b> ${rep.shift_khz} kHz<br>
-        ${toneOrCc}
-        <b>Módok:</b> ${rep.mode.join(", ")}<br>
-        <b>Lokátor:</b> ${rep.locator}<br>
-        <b>ASL:</b> ${rep.asl_m} m<br><br>
+const popupHtml = `
+  <div style="font-family: Arial, sans-serif; font-size: 13px; line-height: 1.4;">
 
-        <b>Állapot:</b> ${statusHu}<br>
-        ${rep.notes ? rep.notes + "<br>" : ""}
-      `;
+    <!-- Hívójel linkkel -->
+    <div style="font-size: 16px; font-weight: bold; margin-bottom: 4px;">
+      <a href="${ha2toLink}" target="_blank" style="color: #0066cc; text-decoration: none;">
+        ${rep.callsign}
+      </a>
+    </div>
+
+    <!-- Város -->
+    <div style="margin-bottom: 6px;">
+      ${rep.qth}
+    </div>
+
+    <!-- Lokátor + ASL -->
+    <div style="margin-bottom: 8px;">
+      <b>Lokátor:</b> ${rep.locator}<br>
+      <b>ASL:</b> ${rep.asl_m} m
+    </div>
+
+    <div style="border-top: 1px solid #ccc; margin: 6px 0;"></div>
+
+    <!-- Üzemmódok -->
+    <b>Üzemmódok:</b> ${rep.mode.join(", ")}<br>
+
+    <div style="border-top: 1px solid #ccc; margin: 6px 0;"></div>
+
+    <!-- Frekvenciák -->
+    <b>RX:</b> ${rep.rx_mhz} MHz<br>
+    <b>TX:</b> ${rep.tx_mhz} MHz<br>
+    <b>Shift:</b> ${rep.shift_khz} kHz<br>
+    ${toneOrCc}
+
+    <div style="border-top: 1px solid #ccc; margin: 6px 0;"></div>
+
+    <!-- Notes -->
+    ${rep.notes ? `<b>Megjegyzés:</b> ${rep.notes}<br>` : ""}
+
+    <!-- Státusz -->
+    <b>Állapot:</b> ${statusHu}<br>
+
+  </div>
+`;
+
 
       L.marker([lat, lon], { icon: pickIcon(rep) })
         .addTo(map)
