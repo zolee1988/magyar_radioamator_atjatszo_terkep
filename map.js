@@ -8,7 +8,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // Ikonok
 const icons = {
-  ANALOG: L.icon({ iconUrl: 'icons/fm.svg', iconSize: [32, 32] }),
+  FM:     L.icon({ iconUrl: 'icons/fm.svg', iconSize: [32, 32] }),
   DMR:    L.icon({ iconUrl: 'icons/dmr.svg', iconSize: [32, 32] }),
   C4FM:   L.icon({ iconUrl: 'icons/c4fm.svg', iconSize: [32, 32] }),
   DSTAR:  L.icon({ iconUrl: 'icons/dstar.svg', iconSize: [32, 32] })
@@ -16,7 +16,7 @@ const icons = {
 
 // Mód alapján ikon választása
 function pickIcon(modes) {
-  if (!modes || modes.length === 0) return icons.ANALOG;
+  if (!modes || modes.length === 0) return icons.FM;
 
   const upper = modes.map(m => m.toUpperCase());
 
