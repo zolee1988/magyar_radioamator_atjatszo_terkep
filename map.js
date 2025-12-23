@@ -5,38 +5,36 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap'
 }).addTo(map);
 
-// ikonok módonként
-const icons = {
-  ANALOG: L.icon({ iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-green.png', iconSize: [28, 28] }),
-  DMR:    L.icon({ iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-red.png', iconSize: [28, 28] }),
-  C4FM:   L.icon({ iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-orange.png', iconSize: [28, 28] }),
-  DSTAR:  L.icon({ iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-yellow.png', iconSize: [28, 28] })
-};
-
-function pickIcon(modes) {
-  if (modes.includes("DMR")) return icons.DMR;
-  if (modes.includes("C4FM")) return icons.C4FM;
-  if (modes.includes("DSTAR")) return icons.DSTAR;
-  return icons.ANALOG;
-}
-
 fetch("repeaters.json")
-  .then(r => r.json())
+  .then(r => {
+    console.log("JSON betöltve:", r);
+    return r.json();
+  })
   .then(list => {
+    console.log("JSON tartalom:", list);
+
     list.forEach(rep => {
       const { lat, lon } = locatorToLatLon(rep.locator);
 
-      L.marker([lat, lon], { icon: pickIcon(rep.mode) })
+      console.log("Marker:", rep.callsign, lat, lon);
+
+      // Ha a lokátor hibás, ne tegyen ki markert
+      if (!lat || !lon || isNaN(lat) || isNaN(lon)) {
+        console.warn("Hibás lokátor:", rep.callsign, rep.locator);
+        return;
+      }
+
+      L.marker([lat, lon])
         .addTo(map)
         .bindPopup(`
           <b>${rep.callsign}</b><br>
-          ${rep.qth}<br><br>
+          ${rep.qth}<br>
           RX: ${rep.rx_mhz} MHz<br>
           TX: ${rep.tx_mhz} MHz<br>
-          Módok: ${rep.mode.join(", ")}<br>
-          ${rep.tone ? "Tone: " + rep.tone + "<br>" : ""}
-          ${rep.notes ? rep.notes + "<br>" : ""}
-          Állapot: ${rep.status}
+          Módok: ${rep.mode.join(", ")}
         `);
     });
+  })
+  .catch(err => {
+    console.error("Hiba a JSON betöltésekor:", err);
   });
