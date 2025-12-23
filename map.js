@@ -15,7 +15,27 @@ const icons = {
 };
 
 // Mód alapján ikon választása
-function pickIcon(rep) { const isDigital = rep.mode.some(m => ["DMR", "C4FM", "DSTAR", "DIGITAL"].includes(m.toUpperCase())); const isActive = rep.status.toUpperCase() === "ACTIVE"; if (isDigital) { return isActive ? icons.dig_active : icons.dig_inactive; } else { return isActive ? icons.fm_active : icons.fm_inactive; } }
+function pickIcon(rep) {
+  const modes = rep.mode.map(m => m.toUpperCase());
+  const isActive = rep.status.toUpperCase() === "ACTIVE";
+
+  const hasFM = modes.includes("FM") || modes.includes("ANALOG");
+  const hasDigital = modes.some(m => ["DMR", "C4FM", "DSTAR", "DIGITAL"].includes(m));
+
+  // FM előnyt élvez
+  if (hasFM) {
+    return isActive ? icons.fm_active : icons.fm_inactive;
+  }
+
+  // Ha nincs FM, de van digitális
+  if (hasDigital) {
+    return isActive ? icons.dig_active : icons.dig_inactive;
+  }
+
+  // Ha semmi nincs megadva → FM-nek vesszük
+  return isActive ? icons.fm_active : icons.fm_inactive;
+}
+
 
 // JSON betöltése
 fetch("repeaters.json")
