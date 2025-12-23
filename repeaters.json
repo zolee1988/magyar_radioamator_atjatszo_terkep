@@ -46,6 +46,22 @@
 },
 
   {
+  "callsign": "HG0RUA",
+  "qth": "Debrecen",
+  "locator": "KN07TM",
+  "asl_m": 157,
+  "rx_mhz": 438.6250,
+  "tx_mhz": 431.0250,
+  "shift_khz": -7600,
+  "tone": "",
+  "cc": null,
+  "mode": ["FM", "C4FM"],
+  "notes": "",
+  "status": "ACTIVE"
+},
+
+
+  {
   "callsign": "HG5RVB",
   "qth": "Budapest (Svábhegy)",
   "locator": "JN97LM",
