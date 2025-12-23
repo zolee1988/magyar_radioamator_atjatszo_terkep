@@ -14,7 +14,7 @@ const icons = {
   dig_inactive: L.icon({ iconUrl: 'icons/digital_inactive.svg', iconSize: [32, 32] })
 };
 
-// Mód alapján ikon választása
+// Mód alapján ikon választása (FM prioritással)
 function pickIcon(rep) {
   const modes = rep.mode.map(m => m.toUpperCase());
   const isActive = rep.status.toUpperCase() === "ACTIVE";
@@ -22,20 +22,16 @@ function pickIcon(rep) {
   const hasFM = modes.includes("FM") || modes.includes("ANALOG");
   const hasDigital = modes.some(m => ["DMR", "C4FM", "DSTAR", "DIGITAL"].includes(m));
 
-  // FM előnyt élvez
   if (hasFM) {
     return isActive ? icons.fm_active : icons.fm_inactive;
   }
 
-  // Ha nincs FM, de van digitális
   if (hasDigital) {
     return isActive ? icons.dig_active : icons.dig_inactive;
   }
 
-  // Ha semmi nincs megadva → FM-nek vesszük
   return isActive ? icons.fm_active : icons.fm_inactive;
 }
-
 
 // JSON betöltése
 fetch("repeaters.json")
@@ -51,21 +47,45 @@ fetch("repeaters.json")
         return;
       }
 
+      // Magyar státusz + szín
+      const isActive = rep.status.toUpperCase() === "ACTIVE";
+      const statusHu = isActive
+        ? '<span style="color: green;">aktív</span>'
+        : '<span style="color: red;">inaktív</span>';
+
+      // Módok
+      const modes = rep.mode.map(m => m.toUpperCase());
+      const hasFM = modes.includes("FM") || modes.includes("ANALOG");
+      const hasDigital = modes.some(m => ["DMR", "C4FM", "DSTAR", "DIGITAL"].includes(m));
+
+      // Tone / CC logika
+      let toneOrCc = "";
+      if (hasFM && rep.tone) {
+        toneOrCc = `<b>CTCSS DL/UL [Hz]:</b> ${rep.tone}<br>`;
+      } else if (hasDigital && rep.cc !== null && rep.cc !== undefined) {
+        toneOrCc = `<b>CC:</b> ${rep.cc}<br>`;
+      }
+
+      // Popup HTML
+      const popupHtml = `
+        <b>${rep.callsign}</b><br>
+        ${rep.qth}<br><br>
+
+        <b>RX:</b> ${rep.rx_mhz} MHz<br>
+        <b>TX:</b> ${rep.tx_mhz} MHz<br>
+        <b>Shift:</b> ${rep.shift_khz} kHz<br>
+        ${toneOrCc}
+        <b>Módok:</b> ${rep.mode.join(", ")}<br>
+        <b>Lokátor:</b> ${rep.locator}<br>
+        <b>ASL:</b> ${rep.asl_m} m<br><br>
+
+        <b>Állapot:</b> ${statusHu}<br>
+        ${rep.notes ? rep.notes + "<br>" : ""}
+      `;
+
       L.marker([lat, lon], { icon: pickIcon(rep) })
         .addTo(map)
-        .bindPopup(`
-          <b>${rep.callsign}</b><br>
-          ${rep.qth}<br><br>
-
-          <b>RX:</b> ${rep.rx_mhz} MHz<br>
-          <b>TX:</b> ${rep.tx_mhz} MHz<br>
-          <b>Shift:</b> ${rep.shift_khz} kHz<br>
-          <b>Tone:</b> ${rep.tone || "-"}<br>
-          <b>Módok:</b> ${rep.mode.join(", ")}<br><br>
-
-          ${rep.notes ? rep.notes + "<br><br>" : ""}
-          <b>Állapot:</b> ${rep.status}
-        `);
+        .bindPopup(popupHtml);
     });
   })
   .catch(err => {
