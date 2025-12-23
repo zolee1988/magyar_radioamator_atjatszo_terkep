@@ -1,51 +1,18 @@
 [
+  { "callsign": "HG3RUB", "qth": "Dombóvár", "locator": "JN96BJ", "asl_m": 155, "rx_mhz": 439.3375, "tx_mhz": 431.7375, "shift_khz": -7600, "tone": "186.2/186.2", "cc": null, "mode": ["FM"], "notes": "", "status": "INACTIVE" },
   {
-    "callsign": "HG2RVA",
-    "qth": "Kőrishegy (Bakony)",
-    "locator": "JN87VH",
-    "rx_mhz": 145.7125,
-    "tx_mhz": 145.1125,
-    "shift_khz": -600,
-    "tone": "CTCSS 107.2/107.2",
-    "mode": ["FM"],
-    "notes": "Echolink: 496382",
-    "status": "ACTIVE"
-  },
-  {
-    "callsign": "HG4RUC",
-    "qth": "Székesfehérvár",
-    "locator": "JN97FE",
-    "rx_mhz": 438.7500,
-    "tx_mhz": 431.1500,
-    "shift_khz": -7600,
-    "tone": "CTCSS 107.2",
-    "mode": ["FM", "C4FM"],
-    "notes": "Echolink: 247090",
-    "status": "ACTIVE"
-  },
-  {
-    "callsign": "HG2RUK",
-    "qth": "Kab-hegy",
-    "locator": "JN87TB",
-    "rx_mhz": 438.3000,
-    "tx_mhz": 430.7000,
-    "shift_khz": -7600,
-    "tone": "",
-    "mode": ["DMR"],
-    "notes": "DMR ID: 216003, CC: 8",
-    "status": "ACTIVE"
-  },
-  {
-  "callsign": "HG3RUB",
-  "qth": "Dombóvár",
-  "locator": "JN96BJ",
-  "rx_mhz": 439.3375,
-  "tx_mhz": 431.7375,
+  "callsign": "HG2RUK",
+  "qth": "Kab-hegy",
+  "locator": "JN87TB",
+  "asl_m": 599,
+  "rx_mhz": 438.3000,
+  "tx_mhz": 430.7000,
   "shift_khz": -7600,
-  "tone": "CTCSS 186.2/186.2",
-  "mode": ["FM"],
-  "notes": "",
-  "status": "INACTIVE"
+  "tone": "",
+  "cc": 8,
+  "mode": ["DMR"],
+  "notes": "DMR ID: 216003",
+  "status": "ACTIVE"
 }
 
 ]
