@@ -39,6 +39,9 @@ fetch("repeaters.json")
   .then(list => {
     console.log("Betöltött átjátszók:", list.length);
 
+    // --- MARKERCLUSTER CSOPORT ---
+    const markers = L.markerClusterGroup();
+
     // --- LOKÁTOR DUPLIKÁTUMOK KEZELÉSE ---
     const locatorGroups = {};
     list.forEach(rep => {
@@ -131,10 +134,15 @@ fetch("repeaters.json")
         </div>
       `;
 
-      L.marker([lat, lon], { icon: pickIcon(rep) })
-        .addTo(map)
+      // --- MARKERCLUSTER: marker hozzáadása ---
+      const marker = L.marker([lat, lon], { icon: pickIcon(rep) })
         .bindPopup(popupHtml);
+
+      markers.addLayer(marker);
     });
+
+    // --- CLUSTER HOZZÁADÁSA A TÉRKÉPHEZ ---
+    map.addLayer(markers);
   })
   .catch(err => {
     console.error("Hiba a JSON betöltésekor:", err);
