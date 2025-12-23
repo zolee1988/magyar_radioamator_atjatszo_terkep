@@ -7,10 +7,10 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // ikonok módonként
 const icons = {
-  ANALOG: L.icon({ iconUrl: 'icons/fm.png', iconSize: [28, 28] }),
-  DMR:    L.icon({ iconUrl: 'icons/dmr.png', iconSize: [28, 28] }),
-  C4FM:   L.icon({ iconUrl: 'icons/c4fm.png', iconSize: [28, 28] }),
-  DSTAR:  L.icon({ iconUrl: 'icons/dstar.png', iconSize: [28, 28] })
+  ANALOG: L.icon({ iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-green.png', iconSize: [28, 28] }),
+  DMR:    L.icon({ iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-red.png', iconSize: [28, 28] }),
+  C4FM:   L.icon({ iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-orange.png', iconSize: [28, 28] }),
+  DSTAR:  L.icon({ iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-yellow.png', iconSize: [28, 28] })
 };
 
 function pickIcon(modes) {
