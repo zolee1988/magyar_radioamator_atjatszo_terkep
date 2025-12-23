@@ -13,6 +13,54 @@
   "mode": ["DMR"],
   "notes": "DMR ID: 216003",
   "status": "ACTIVE"
+},
+  { "callsign": "HG4RUC", "qth": "Székesfehérvár", "locator": "JN97FE", "asl_m": 179, "rx_mhz": 438.7500, "tx_mhz": 431.1500, "shift_khz": -7600, "tone": "107.2/107.2", "cc": null, "mode": ["FM", "C4FM"], "notes": "Echolink: 247090", "status": "ACTIVE" },
+  {
+  "callsign": "HG4RUD",
+  "qth": "Velencei-tó (Nadap, Meleg-hegy)",
+  "locator": "JN97HG",
+  "asl_m": 367,
+  "rx_mhz": 438.2375,
+  "tx_mhz": 430.6375,
+  "shift_khz": -7600,
+  "tone": "",
+  "cc": 8,
+  "mode": ["DMR"],
+  "notes": "DMR ID: 216120",
+  "status": "ACTIVE"
+},
+
+  {
+  "callsign": "HG0RVA",
+  "qth": "Debrecen",
+  "locator": "KN07TN",
+  "asl_m": 157,
+  "rx_mhz": 145.0000,
+  "tx_mhz": 145.6000,
+  "shift_khz": 600,
+  "tone": "131.8/131.8",
+  "cc": null,
+  "mode": ["FM", "C4FM"],
+  "notes": "Echolink: 406293",
+  "status": "ACTIVE"
+},
+
+  {
+  "callsign": "HG5RVB",
+  "qth": "Budapest (Svábhegy)",
+  "locator": "JN97LM",
+  "asl_m": 500,
+  "rx_mhz": 145.6000,
+  "tx_mhz": 145.0000,
+  "shift_khz": -600,
+  "tone": "",
+  "cc": null,
+  "mode": ["C4FM"],
+  "notes": "",
+  "status": "ACTIVE"
 }
+
+
+
 
 ]
