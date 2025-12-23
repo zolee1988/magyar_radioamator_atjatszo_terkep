@@ -39,13 +39,37 @@ fetch("repeaters.json")
   .then(list => {
     console.log("Betöltött átjátszók:", list.length);
 
+    // --- LOKÁTOR DUPLIKÁTUMOK KEZELÉSE ---
+    const locatorGroups = {};
     list.forEach(rep => {
-      const { lat, lon } = locatorToLatLon(rep.locator);
+      if (!locatorGroups[rep.locator]) {
+        locatorGroups[rep.locator] = [];
+      }
+      locatorGroups[rep.locator].push(rep);
+    });
+    // -------------------------------------
+
+    list.forEach(rep => {
+
+      // Lokátorból koordináta
+      let { lat, lon } = locatorToLatLon(rep.locator);
 
       if (!lat || !lon || isNaN(lat) || isNaN(lon)) {
         console.warn("Hibás lokátor:", rep.callsign, rep.locator);
         return;
       }
+
+      // --- MARKER ELTOLÁS DUPLIKÁLT LOKÁTOR ESETÉN ---
+      const group = locatorGroups[rep.locator];
+      if (group.length > 1) {
+        const index = group.indexOf(rep);
+        const offset = 0.001; // kb. 100–120 m
+        const angle = (index / group.length) * 2 * Math.PI;
+
+        lat += Math.sin(angle) * offset;
+        lon += Math.cos(angle) * offset;
+      }
+      // ------------------------------------------------
 
       // Magyar státusz + szín
       const isActive = rep.status.toUpperCase() === "ACTIVE";
@@ -69,51 +93,43 @@ fetch("repeaters.json")
       // Popup HTML
       const ha2toLink = `http://ha2to.orbel.hu/content/repeaters/hu/${rep.callsign}.html`;
 
-const popupHtml = `
-  <div style="font-family: Arial, sans-serif; font-size: 13px; line-height: 1.4;">
+      const popupHtml = `
+        <div style="font-family: Arial, sans-serif; font-size: 13px; line-height: 1.4;">
 
-    <!-- Hívójel linkkel -->
-    <div style="font-size: 16px; font-weight: bold; margin-bottom: 4px;">
-      <a href="${ha2toLink}" target="_blank" style="color: #0066cc; text-decoration: none;">
-        ${rep.callsign}
-      </a>
-    </div>
+          <div style="font-size: 16px; font-weight: bold; margin-bottom: 4px;">
+            <a href="${ha2toLink}" target="_blank" style="color: #0066cc; text-decoration: none;">
+              ${rep.callsign}
+            </a>
+          </div>
 
-    <!-- Város -->
-    <div style="margin-bottom: 6px;">
-      ${rep.qth}
-    </div>
+          <div style="margin-bottom: 6px;">
+            ${rep.qth}
+          </div>
 
-    <!-- Lokátor + ASL -->
-    <div style="margin-bottom: 8px;">
-      <b>Lokátor:</b> ${rep.locator}<br>
-      <b>ASL:</b> ${rep.asl_m} m
-    </div>
+          <div style="margin-bottom: 8px;">
+            <b>Lokátor:</b> ${rep.locator}<br>
+            <b>ASL:</b> ${rep.asl_m} m
+          </div>
 
-    <div style="border-top: 1px solid #ccc; margin: 6px 0;"></div>
+          <div style="border-top: 1px solid #ccc; margin: 6px 0;"></div>
 
-    <!-- Üzemmódok -->
-    <b>Üzemmódok:</b> ${rep.mode.join(", ")}<br>
+          <b>Üzemmódok:</b> ${rep.mode.join(", ")}<br>
 
-    <div style="border-top: 1px solid #ccc; margin: 6px 0;"></div>
+          <div style="border-top: 1px solid #ccc; margin: 6px 0;"></div>
 
-    <!-- Frekvenciák -->
-    <b>RX:</b> ${rep.rx_mhz} MHz<br>
-    <b>TX:</b> ${rep.tx_mhz} MHz<br>
-    <b>Shift:</b> ${rep.shift_khz} kHz<br>
-    ${toneOrCc}
+          <b>RX:</b> ${rep.rx_mhz} MHz<br>
+          <b>TX:</b> ${rep.tx_mhz} MHz<br>
+          <b>Shift:</b> ${rep.shift_khz} kHz<br>
+          ${toneOrCc}
 
-    <div style="border-top: 1px solid #ccc; margin: 6px 0;"></div>
+          <div style="border-top: 1px solid #ccc; margin: 6px 0;"></div>
 
-    <!-- Notes -->
-    ${rep.notes ? `<b>Megjegyzés:</b> ${rep.notes}<br>` : ""}
+          ${rep.notes ? `<b>Megjegyzés:</b> ${rep.notes}<br>` : ""}
 
-    <!-- Státusz -->
-    <b>Állapot:</b> ${statusHu}<br>
+          <b>Állapot:</b> ${statusHu}<br>
 
-  </div>
-`;
-
+        </div>
+      `;
 
       L.marker([lat, lon], { icon: pickIcon(rep) })
         .addTo(map)
