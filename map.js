@@ -103,8 +103,8 @@ fetch("repeaters.json")
 
           <div style="border-top: 1px solid #ccc; margin: 6px 0;"></div>
 
-          <b>RX:</b> ${rep.rx_mhz} MHz<br>
-          <b>TX:</b> ${rep.tx_mhz} MHz<br>
+          <b>RX:</b> ${rep.rx_khz} kHz<br>
+          <b>TX:</b> ${rep.tx_khz} kHz<br>
           <b>Shift:</b> ${rep.shift_khz} kHz<br>
           ${toneOrCc}
 
