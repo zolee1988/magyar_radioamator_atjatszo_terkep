@@ -59,6 +59,21 @@
   "notes": "",
   "status": "ACTIVE"
 },
+  {
+  "callsign": "HG0RUD",
+  "qth": "Debrecen",
+  "locator": "KN07TN",
+  "asl_m": 185,
+  "rx_mhz": 438.4250,
+  "tx_mhz": 430.8250,
+  "shift_khz": -7600,
+  "tone": "",
+  "cc": 8,
+  "mode": ["DMR"],
+  "notes": "DMR ID: 216803",
+  "status": "ACTIVE"
+},
+
 
 
   {
