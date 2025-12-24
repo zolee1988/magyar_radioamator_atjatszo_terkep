@@ -10,13 +10,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
    MAIDENHEAD GRID RÉTEG (6 karakteres lokátor)
    ──────────────────────────────────────────────── */
 
-const maidenhead = L.maidenhead({
-  color: "#ff8800",
-  weight: 1,
-  opacity: 0.6,
-  showLabels: true,
-  precision: 3   // 6 karakteres lokátor (JN97eh)
-});
+const maidenhead = L.maidenheadGrid({ color: "#ff8800", weight: 1, opacity: 0.6, showLabels: true, fontSize: 12, precision: 3 // 6 karakteres lokátor });
 
 maidenhead.addTo(map);  // GRID bekapcsolva induláskor
 
