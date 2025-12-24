@@ -37,16 +37,17 @@
     "qth": "Sátoraljaújhely",
     "locator": "KN08TJ",
     "asl_m": 530,
-    "rx_khz": null,
-    "tx_khz": null,
-    "shift_khz": null,
-    "tone": null,
+    "rx_khz": "438737.5",
+    "tx_khz": "431137.5",
+    "shift_khz": "-7600",
+    "tone": "114.8/114.8",
     "cc": null,
     "mode": [
       "FM"
     ],
     "status": "ACTIVE",
-    "notes": "Echolink: 273404"
+    "notes": "Echolink: 273404
+    Az antenna sugárzási iránya 125 fok."
   },
   {
     "callsign": "HG0RUV",
