@@ -51,28 +51,28 @@
   {
     "callsign": "HG0RUV",
     "qth": "Vészhelyzeti átjátszó",
-    "locator": "",
+    "locator": "JN97SC",
     "asl_m": 0,
-    "rx_khz": null,
-    "tx_khz": null,
-    "shift_khz": null,
-    "tone": null,
+    "rx_khz": "438925.0",
+    "tx_khz": "431325.0",
+    "shift_khz": "-7600",
+    "tone": "--/--",
     "cc": null,
     "mode": [
       "FM"
     ],
     "status": "INACTIVE",
-    "notes": ""
+    "notes": "MRASZ-RKSZ ideiglenesen bárhol telepíthető, veszélyhelyzetben használható átjátszó."
   },
   {
     "callsign": "HG0RVA",
     "qth": "Debrecen",
     "locator": "KN07TN",
     "asl_m": 157,
-    "rx_khz": null,
-    "tx_khz": null,
-    "shift_khz": null,
-    "tone": null,
+    "rx_khz": "145000.0",
+    "tx_khz": "145600.0",
+    "shift_khz": "+600",
+    "tone": "131.8/131.8",
     "cc": null,
     "mode": [
       "FM",
@@ -86,26 +86,26 @@
     "qth": "Nyíregyháza",
     "locator": "KN07UX",
     "asl_m": 145,
-    "rx_khz": null,
-    "tx_khz": null,
-    "shift_khz": null,
-    "tone": null,
+    "rx_khz": "145662.5",
+    "tx_khz": "145062.5",
+    "shift_khz": "-600",
+    "tone": "114.8/114.8",
     "cc": null,
     "mode": [
       "FM"
     ],
     "status": "INACTIVE",
-    "notes": ""
+    "notes": "Az átjátszó kivételeseen nem a körzetéhez tartozó, hanem a 114,8 Hz-es CTCSS frekvenciát használja."
   },
   {
     "callsign": "HG1RUC",
     "qth": "Szombathely",
     "locator": "JN87HF",
     "asl_m": 268,
-    "rx_khz": null,
-    "tx_khz": null,
-    "shift_khz": null,
-    "tone": null,
+    "rx_khz": "439125.0",
+    "tx_khz": "431525.0",
+    "shift_khz": "-7600",
+    "tone": "107.2/--",
     "cc": null,
     "mode": [
       "FM"
