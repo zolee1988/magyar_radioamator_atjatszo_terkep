@@ -280,10 +280,10 @@
     "qth": "Tihany",
     "locator": "JN86WV",
     "asl_m": 281,
-    "rx_khz": null,
-    "tx_khz": null,
-    "shift_khz": null,
-    "tone": null,
+    "rx_khz": "145750.0",
+    "tx_khz": "145150.0",
+    "shift_khz": "-600",
+    "tone": "103.5/--",
     "cc": null,
     "mode": [
       "FM"
@@ -296,26 +296,26 @@
     "qth": "Kab-hegy",
     "locator": "JN87TB",
     "asl_m": 620,
-    "rx_khz": null,
-    "tx_khz": null,
+    "rx_khz": "144700.0",
+    "tx_khz": "144700.0",
     "shift_khz": null,
-    "tone": null,
+    "tone": "107.2/107.2",
     "cc": null,
     "mode": [
       "FM"
     ],
     "status": "ACTIVE",
-    "notes": ""
+    "notes": "Keresztsávos retranszlációs átjátszó. A másik oldal a HA2RVX."
   },
   {
     "callsign": "HG3RUA",
     "qth": "Siófok (Ságvár)",
     "locator": "JN96BT",
     "asl_m": 220,
-    "rx_khz": null,
-    "tx_khz": null,
-    "shift_khz": null,
-    "tone": null,
+    "rx_khz": "439150.0",
+    "tx_khz": "431550.0",
+    "shift_khz": "-7600",
+    "tone": --/--,
     "cc": null,
     "mode": [
       "FM"
@@ -328,10 +328,10 @@
     "qth": "Dombóvár",
     "locator": "JN96BJ",
     "asl_m": 155,
-    "rx_khz": null,
-    "tx_khz": null,
-    "shift_khz": null,
-    "tone": null,
+    "rx_khz": "439337.5",
+    "tx_khz": "431737.5",
+    "shift_khz": "-7600	",
+    "tone": "186.2/186.2",
     "cc": null,
     "mode": [
       "FM"
@@ -344,10 +344,10 @@
     "qth": "Pécs (Tubes)",
     "locator": "JN96CC",
     "asl_m": 616,
-    "rx_khz": null,
-    "tx_khz": null,
-    "shift_khz": null,
-    "tone": null,
+    "rx_khz": "438900.0",
+    "tx_khz": "431300.0",
+    "shift_khz": "-7600",
+    "tone": "74.4/74.4",
     "cc": null,
     "mode": [
       "FM"
@@ -360,10 +360,10 @@
     "qth": "Pécs (Tubes)",
     "locator": "JN96CC",
     "asl_m": 616,
-    "rx_khz": null,
-    "tx_khz": null,
-    "shift_khz": null,
-    "tone": null,
+    "rx_khz": "145775.0",
+    "tx_khz": "145175.0",
+    "shift_khz": "-600",
+    "tone": "74.4/74.4",
     "cc": null,
     "mode": [
       "FM"
@@ -376,10 +376,10 @@
     "qth": "Fonyód (Balaton)",
     "locator": "JN86SR",
     "asl_m": 243,
-    "rx_khz": null,
-    "tx_khz": null,
-    "shift_khz": null,
-    "tone": null,
+    "rx_khz": "145612.5",
+    "tx_khz": "145012.5",
+    "shift_khz": "-600",
+    "tone": "107.2/--",
     "cc": null,
     "mode": [
       "FM"
@@ -392,10 +392,10 @@
     "qth": "Szekszárd",
     "locator": "JN96II",
     "asl_m": 296,
-    "rx_khz": null,
-    "tx_khz": null,
-    "shift_khz": null,
-    "tone": null,
+    "rx_khz": "145737.5",
+    "tx_khz": "145137.5",
+    "shift_khz": "-600",
+    "tone": "74.4/--",
     "cc": null,
     "mode": [
       "FM"
@@ -408,10 +408,10 @@
     "qth": "Kaposvár 2. (Igal)",
     "locator": "JN86XN",
     "asl_m": 336,
-    "rx_khz": null,
-    "tx_khz": null,
-    "shift_khz": null,
-    "tone": null,
+    "rx_khz": "145700.0",
+    "tx_khz": "145100.0",
+    "shift_khz": "-600",
+    "tone": "74.4/74.4",
     "cc": null,
     "mode": [
       "FM"
@@ -424,10 +424,10 @@
     "qth": "Kőszárhegy (Polgárdi)",
     "locator": "JN97DC",
     "asl_m": 197,
-    "rx_khz": null,
-    "tx_khz": null,
-    "shift_khz": null,
-    "tone": null,
+    "rx_khz": "438700.0",
+    "tx_khz": "431100.0",
+    "shift_khz": "-7600",
+    "tone": "107.2/107.2",
     "cc": null,
     "mode": [
       "FM"
@@ -440,10 +440,10 @@
     "qth": "Székesfehérvár",
     "locator": "JN97FE",
     "asl_m": 179,
-    "rx_khz": null,
-    "tx_khz": null,
-    "shift_khz": null,
-    "tone": null,
+    "rx_khz": "438750.0",
+    "tx_khz": "431150.0",
+    "shift_khz": "-7600",
+    "tone": "107.2/107.2",
     "cc": null,
     "mode": [
       "FM",
