@@ -111,8 +111,7 @@ fetch("repeaters.json")
           <b>Shift:</b> ${rep.shift_khz} kHz<br>
           ${toneOrCc}
 
-          //${rep.notes ? `<div style="border-top: 1px solid #ccc; margin: 6px 0;"></div><b>Megjegyzés:</b> ${rep.notes}<br>` : ""}
-          ${rep.notes ? `<div style="border-top: 1px solid #ccc; margin: 6px 0;"></div><b>Megjegyzés:</b> ${rep.notes.replace(/\n/g, "<br>")}<br>` : ""}
+          ${rep.notes ? `<div style="border-top: 1px solid #ccc; margin: 6px 0;"></div><b>Megjegyzés:</b><br> ${rep.notes.replace(/\n/g, "<br>")}<br>` : ""}
 
           <div style="border-top: 1px solid #ccc; margin: 6px 0;"></div>
           <b>Állapot:</b> ${statusHu}
