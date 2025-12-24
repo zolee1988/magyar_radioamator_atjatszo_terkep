@@ -7,24 +7,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 /* ────────────────────────────────────────────────
-   MAIDENHEAD GRID RÉTEG (6 karakteres lokátor)
-   ──────────────────────────────────────────────── */
-
-const maidenhead = L.maidenhead({
-  precision: 3,        // 6 karakteres lokátor (JN97eh)
-  color: "#ff8800",
-  weight: 1,
-  opacity: 0.6,
-  showLabels: true,
-  fontSize: 12
-});
-
-maidenhead.addTo(map);  // GRID bekapcsolva induláskor
-
-// Ha szeretnéd később ki-be kapcsolhatóvá tenni:
-// L.control.layers(null, { "Maidenhead GRID": maidenhead }).addTo(map);
-
-/* ────────────────────────────────────────────────
    Ikonok
    ──────────────────────────────────────────────── */
 
