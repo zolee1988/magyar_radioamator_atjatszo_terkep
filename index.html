@@ -21,50 +21,55 @@
 
 <body>
 
-<!-- EGYSÉGES FELSŐ PANEL (bal + jobb oszlop) -->
-<div class="top-panel">
-  
-  <div class="left">
-    <div class="title">Magyarországi VHF és UHF rádióamatőr átjátszók térképe</div>
-    <div class="subtitle">készítette HG4ZKZ Zoli, HA2TO Árpi adatbázisa alapján</div>
-    <div class="source">
-      Forrás: <a href="http://ha2to.orbel.hu/content/repeaters/hu/index.html" target="_blank">HA2TO átjátszólista</a>
-    </div>
-    <div class="updated">Utolsó frissítés: 2025.12.24.</div>
-
-    <div class="support">
-      Ha szeretnéd támogatni a projektet és a munkámat, PayPal-on tudsz támogatást küldeni:
-      <a href="https://www.paypal.com/donate/?business=WBPE7H8CM2PEQ&no_recurring=0&currency_code=HUF" target="_blank">
-        <img src="https://img.shields.io/badge/PayPal-Donate-blue.svg" alt="Donate with PayPal button">
-      </a>
-    </div>
+<div class="header">
+  <div class="title">Magyarországi VHF és UHF rádióamatőr átjátszók térképe</div>
+  <div class="subtitle">készítette HG4ZKZ Zoli, HA2TO Árpi adatbázisa alapján</div>
+  <div class="source">
+    Forrás: <a href="http://ha2to.orbel.hu/content/repeaters/hu/index.html" target="_blank">HA2TO átjátszólista</a>
   </div>
+  <div class="updated">Utolsó frissítés: 2025.12.24.</div>
 
-  <div class="right">
-    <div class="legend">
-      <b>Jelmagyarázat</b><br>
-      <span class="dot active"></span> aktív<br>
-      <span class="dot inactive"></span> inaktív<br>
-      <b>A</b> analóg (FM)<br>
-      <b>D</b> digitális (DMR / C4FM / D‑STAR)
-    </div>
-
-    <div class="filters">
-      <b>Szűrők</b><br>
-      <label><input type="checkbox" id="filterActive" checked> Aktív</label><br>
-      <label><input type="checkbox" id="filterInactive" checked> Inaktív</label><br>
-      <label><input type="checkbox" id="filterAnalog" checked> Analóg</label><br>
-      <label><input type="checkbox" id="filterDigital" checked> Digitális</label>
-    </div>
+  <div class="support">
+    Ha szeretnéd támogatni a projektet és a munkámat, PayPal-on tudsz támogatást küldeni:
+    <a href="https://www.paypal.com/donate/?business=WBPE7H8CM2PEQ&no_recurring=0&currency_code=HUF" target="_blank">
+      <img src="https://img.shields.io/badge/PayPal-Donate-blue.svg" alt="Donate with PayPal button">
+    </a>
   </div>
-
 </div>
+
+  
+
 
 <div id="map"></div>
 
+<!-- ÚJ közös alsó panel -->
+<div id="bottomPanel">
+  <div class="legend">
+    <b>Jelmagyarázat</b><br>
+    <span class="dot active"></span> aktív<br>
+    <span class="dot inactive"></span> inaktív<br>
+    <b>A</b> analóg (FM)<br>
+    <b>D</b> digitális (DMR / C4FM / D‑STAR)
+  </div>
+
+  <div class="filters">
+    <b>Szűrők</b><br>
+    <label><input type="checkbox" id="filterActive" checked> Aktív</label><br>
+    <label><input type="checkbox" id="filterInactive" checked> Inaktív</label><br>
+    <label><input type="checkbox" id="filterAnalog" checked> Analóg</label><br>
+    <label><input type="checkbox" id="filterDigital" checked> Digitális</label>
+  </div>
+</div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- MarkerCluster JS -->
+<script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+
+<!-- Saját JS -->
 <script src="locator.js"></script>
 <script src="map.js"></script>
 
 </body>
-
 </html>
