@@ -1,21 +1,34 @@
 /* Alap reset */
-body, html {
+html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: Arial, sans-serif;
-  background: #f0f0f0;
 }
 
-/* Fejléc */
+/* Térkép teljes képernyőn */
+#map {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Felső fejléc – PMR-stílus */
 .header {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(6px);
-  padding: 20px;
-  border-bottom: 1px solid #ccc;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 8px;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
   text-align: center;
 }
 
+/* Tipográfia */
 .header .title {
   font-size: 30px;
   font-weight: bold;
@@ -27,38 +40,48 @@ body, html {
 .header .updated,
 .header .support {
   font-size: 18px;
+  margin-bottom: 4px;
   line-height: 1.4;
-  margin-bottom: 6px;
 }
 
+/* Linkek a fejlécben */
+.header a {
+  color: #aee2ff;
+  text-decoration: none;
+}
+
+.header a:hover {
+  text-decoration: underline;
+}
+
+/* PayPal gomb igazítása */
 .header .support img {
   vertical-align: middle;
   margin-left: 6px;
 }
 
-/* Térkép */
-#map {
-  width: 100%;
-  height: calc(100% - 230px); /* fejléc + alsó panel helye */
-}
-
-/* Alsó panel */
+/* Alsó panel – PMR-stílusú overlay */
 #bottomPanel {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(6px);
-  border-top: 1px solid #ccc;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 8px;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+
   display: flex;
   justify-content: space-between;
-  padding: 12px 20px;
-  box-sizing: border-box;
+  gap: 20px;
 }
 
 /* Jelmagyarázat */
 .legend {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.4;
 }
 
@@ -80,7 +103,7 @@ body, html {
 
 /* Szűrők */
 .filters {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.4;
 }
 
@@ -88,18 +111,21 @@ body, html {
   cursor: pointer;
 }
 
-/* Mobilbarát megjelenés */
+/* Popup nagyítás – mint a PMR-es térképen */
+.leaflet-popup-content {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+/* Mobilbarát */
 @media (max-width: 600px) {
-  #map {
-    height: calc(100% - 280px);
+  .header, #bottomPanel {
+    width: 95%;
+    padding: 12px 16px;
   }
 
   #bottomPanel {
     flex-direction: column;
     text-align: center;
-  }
-
-  .legend, .filters {
-    margin-bottom: 10px;
   }
 }
