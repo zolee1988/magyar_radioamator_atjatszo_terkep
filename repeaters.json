@@ -2,7 +2,7 @@
   {
     "callsign": "HA2RVX",
     "qth": "Kab-hegy",
-    "locator": "JN87TB",
+    "locator": "JN87TB81ti",
     "asl_m": 620,
     "rx_khz": "70475.0",
     "tx_khz": "70475.0",
@@ -35,7 +35,7 @@
   {
     "callsign": "HG0RUB",
     "qth": "Sátoraljaújhely",
-    "locator": "KN08TJ",
+    "locator": "KN08TJ56",
     "asl_m": 530,
     "rx_khz": "438737.5",
     "tx_khz": "431137.5",
@@ -84,7 +84,7 @@
   {
     "callsign": "HG0RVB",
     "qth": "Nyíregyháza",
-    "locator": "KN07UX",
+    "locator": "KN07UX52",
     "asl_m": 145,
     "rx_khz": "145662.5",
     "tx_khz": "145062.5",
@@ -100,7 +100,7 @@
   {
     "callsign": "HG1RUC",
     "qth": "Szombathely",
-    "locator": "JN87HF",
+    "locator": "JN87HF07",
     "asl_m": 268,
     "rx_khz": "439125.0",
     "tx_khz": "431525.0",
@@ -116,7 +116,7 @@
   {
     "callsign": "HG1RUD",
     "qth": "Győr (Nyúl-hegy)",
-    "locator": "JN87TN",
+    "locator": "JN87TN89",
     "asl_m": 310,
     "rx_khz": "439250.0",
     "tx_khz": "431650.0",
@@ -133,7 +133,7 @@
   {
     "callsign": "HG1RVA",
     "qth": "Zalaegerszeg",
-    "locator": "JN86JT",
+    "locator": "JN86JT75",
     "asl_m": 370,
     "rx_khz": "145662.5",
     "tx_khz": "145062.5",
@@ -150,7 +150,7 @@
   {
     "callsign": "HG1RVB",
     "qth": "Sopron",
-    "locator": "JN87GP",
+    "locator": "JN87GP88ex",
     "asl_m": 484,
     "rx_khz": "145687.5",
     "tx_khz": "145087.5",
@@ -166,7 +166,7 @@
   {
     "callsign": "HG1RVD",
     "qth": "Győr (Nyúl-hegy)",
-    "locator": "JN87TN",
+    "locator": "JN87TN89",
     "asl_m": 310,
     "rx_khz": "145637.5",
     "tx_khz": "145037.5",
@@ -182,7 +182,7 @@
   {
     "callsign": "HG2RUB",
     "qth": "Esztergom (Vaskapu-hegy)",
-    "locator": "JN97JS",
+    "locator": "JN97JS28",
     "asl_m": 370,
     "rx_khz": "439425.0",
     "tx_khz": "431825.0",
@@ -198,7 +198,7 @@
   {
     "callsign": "HG2RUC",
     "qth": "Kab-hegy",
-    "locator": "JN87TB",
+    "locator": "JN87TB81th",
     "asl_m": 620,
     "rx_khz": "439400.0",
     "tx_khz": "431800.0",
@@ -230,7 +230,7 @@
   {
     "callsign": "HG2RVA",
     "qth": "Kőrishegy (Bakony)",
-    "locator": "JN87VH",
+    "locator": "JN87VH00",
     "asl_m": 744,
     "rx_khz": "145712.5",
     "tx_khz": "145112.5",
@@ -246,7 +246,7 @@
   {
     "callsign": "HG2RVC",
     "qth": "Dorog",
-    "locator": "JN97IR",
+    "locator": "JN97IR73",
     "asl_m": 168,
     "rx_khz": "145662.5",
     "tx_khz": "145062.5",
@@ -262,7 +262,7 @@
   {
     "callsign": "HG2RVD",
     "qth": "Esztergom (Vaskapu-hegy)",
-    "locator": "JN97JS",
+    "locator": "JN97JS28",
     "asl_m": 370,
     "rx_khz": "145787.5",
     "tx_khz": "145187.5",
@@ -278,7 +278,7 @@
   {
     "callsign": "HG2RVG",
     "qth": "Tihany",
-    "locator": "JN86WV",
+    "locator": "JN86WV66fc",
     "asl_m": 281,
     "rx_khz": "145750.0",
     "tx_khz": "145150.0",
@@ -294,7 +294,7 @@
   {
     "callsign": "HG2RVX",
     "qth": "Kab-hegy",
-    "locator": "JN87TB",
+    "locator": "JN87TB81ti",
     "asl_m": 620,
     "rx_khz": "144700.0",
     "tx_khz": "144700.0",
@@ -326,7 +326,7 @@
   {
     "callsign": "HG3RUB",
     "qth": "Dombóvár",
-    "locator": "JN96BJ",
+    "locator": "JN96BJ40",
     "asl_m": 155,
     "rx_khz": "439337.5",
     "tx_khz": "431737.5",
@@ -342,7 +342,7 @@
   {
     "callsign": "HG3RUC",
     "qth": "Pécs (Tubes)",
-    "locator": "JN96CC",
+    "locator": "JN96CC46ic",
     "asl_m": 616,
     "rx_khz": "438900.0",
     "tx_khz": "431300.0",
@@ -358,7 +358,7 @@
   {
     "callsign": "HG3RVA",
     "qth": "Pécs (Tubes)",
-    "locator": "JN96CC",
+    "locator": "JN96CC46ic",
     "asl_m": 616,
     "rx_khz": "145775.0",
     "tx_khz": "145175.0",
@@ -374,7 +374,7 @@
   {
     "callsign": "HG3RVB",
     "qth": "Fonyód (Balaton)",
-    "locator": "JN86SR",
+    "locator": "JN86SR57df",
     "asl_m": 243,
     "rx_khz": "145612.5",
     "tx_khz": "145012.5",
@@ -390,7 +390,7 @@
   {
     "callsign": "HG3RVC",
     "qth": "Szekszárd",
-    "locator": "JN96II",
+    "locator": "JN96II07",
     "asl_m": 296,
     "rx_khz": "145737.5",
     "tx_khz": "145137.5",
@@ -406,7 +406,7 @@
   {
     "callsign": "HG3RVF",
     "qth": "Kaposvár 2. (Igal)",
-    "locator": "JN86XN",
+    "locator": "JN86XN15",
     "asl_m": 336,
     "rx_khz": "145700.0",
     "tx_khz": "145100.0",
@@ -422,7 +422,7 @@
   {
     "callsign": "HG4RUA",
     "qth": "Kőszárhegy (Polgárdi)",
-    "locator": "JN97DC",
+    "locator": "JN97DC71",
     "asl_m": 197,
     "rx_khz": "438700.0",
     "tx_khz": "431100.0",
@@ -455,7 +455,7 @@
   {
     "callsign": "HG5RHA",
     "qth": "Budapest",
-    "locator": "JN97MN",
+    "locator": "JN97MN02",
     "asl_m": 437,
     "rx_khz": "29670.0",
     "tx_khz": "29570.0",
@@ -519,7 +519,7 @@
   {
     "callsign": "HG6RUA",
     "qth": "Galyatető (Mátra)",
-    "locator": "JN97WV",
+    "locator": "JN97WV99",
     "asl_m": 1035,
     "rx_khz": "439375.0",
     "tx_khz": "431775.0",
@@ -536,7 +536,7 @@
   {
     "callsign": "HG6RVA",
     "qth": "Galyatető (Mátra)",
-    "locator": "JN97WV",
+    "locator": "JN97WV99",
     "asl_m": 1035,
     "rx_khz": "145625.0",
     "tx_khz": "145025.0",
@@ -552,7 +552,7 @@
   {
     "callsign": "HG7RUB",
     "qth": "Cegléd",
-    "locator": "JN97VE",
+    "locator": "JN97VE52",
     "asl_m": 136,
     "rx_khz": "438800.0",
     "tx_khz": "431200.0",
@@ -569,7 +569,7 @@
   {
     "callsign": "HG7RUC",
     "qth": "Dobogókő",
-    "locator": "JN97KR",
+    "locator": "JN97KR82",
     "asl_m": 740,
     "rx_khz": "439350.0",
     "tx_khz": "431750.0",
@@ -585,7 +585,7 @@
   {
     "callsign": "HG7RUE",
     "qth": "Budapest (Széchenyi-hegy, TV-torony)",
-    "locator": "JN97LL",
+    "locator": "JN97LL78nb",
     "asl_m": 528,
     "rx_khz": "438775.0",
     "tx_khz": "431175.0",
@@ -649,7 +649,7 @@
   {
     "callsign": "HG7RVC",
     "qth": "Cegléd",
-    "locator": "JN97VE",
+    "locator": "JN97VE52",
     "asl_m": 136,
     "rx_khz": "145787.5",
     "tx_khz": "145187.5",
@@ -665,7 +665,7 @@
   {
     "callsign": "HG8RUA",
     "qth": "Szeged",
-    "locator": "KN06BG",
+    "locator": "KN06BG75",
     "asl_m": 244,
     "rx_khz": "438662.5",
     "tx_khz": "431062.5",
@@ -812,7 +812,7 @@
   {
     "callsign": "HG9RUA",
     "qth": "Kis-kőhát (Bükk)",
-    "locator": "KN08FB",
+    "locator": "KN08FB85gw",
     "asl_m": 979,
     "rx_khz": "438862.5",
     "tx_khz": "431262.5",
@@ -828,7 +828,7 @@
   {
     "callsign": "HG9RUD",
     "qth": "Ózd",
-    "locator": "KN08DF",
+    "locator": "KN08DF54",
     "asl_m": 252,
     "rx_khz": "438762.5",
     "tx_khz": "431162.5",
@@ -844,7 +844,7 @@
   {
     "callsign": "HG9RUG",
     "qth": "Kis-kőhát (Bükk)",
-    "locator": "KN08FB",
+    "locator": "KN08FB85gw",
     "asl_m": 976,
     "rx_khz": "438200.0",
     "tx_khz": "430600.0",
@@ -861,7 +861,7 @@
   {
     "callsign": "HG9RVA",
     "qth": "Kis-kőhát (Bükk)",
-    "locator": "KN08FB",
+    "locator": "KN08FB85gw",
     "asl_m": 976,
     "rx_khz": "145725.0",
     "tx_khz": "145125.0",
@@ -877,7 +877,7 @@
   {
     "callsign": "HG9RVB",
     "qth": "Miskolc (Bükkszentkereszt)",
-    "locator": "KN08HB",
+    "locator": "KN08HB84xo",
     "asl_m": 732,
     "rx_khz": "145687.5",
     "tx_khz": "145087.5",
@@ -893,7 +893,7 @@
   {
     "callsign": "HG9RVC",
     "qth": "Sátoraljaújhely",
-    "locator": "KN08TJ",
+    "locator": "KN08TJ56",
     "asl_m": 558,
     "rx_khz": "145775.0",
     "tx_khz": "145175.0",
@@ -909,7 +909,7 @@
   {
     "callsign": "HG9RVD",
     "qth": "Ózd",
-    "locator": "KN08DF",
+    "locator": "KN08DF54",
     "asl_m": 293,
     "rx_khz": "145762.5",
     "tx_khz": "145162.5",
@@ -941,7 +941,7 @@
   {
     "callsign": "HG1RUA",
     "qth": "Zalaegerszeg",
-    "locator": "JN86JT",
+    "locator": "JN86JT75",
     "asl_m": 370,
     "rx_khz": "439337.5",
     "tx_khz": "431737.5",
@@ -959,7 +959,7 @@
   {
     "callsign": "HG1RUB",
     "qth": "Sopron",
-    "locator": "JN87GP",
+    "locator": "JN87GP89gw",
     "asl_m": 432,
     "rx_khz": "439375.0",
     "tx_khz": "431775.0",
@@ -977,7 +977,7 @@
   {
     "callsign": "HG1RUE",
     "qth": "Győr (Nyúl-hegy)",
-    "locator": "JN87TN",
+    "locator": "JN87TN99",
     "asl_m": 350,
     "rx_khz": "438250.0",
     "tx_khz": "430650.0",
@@ -993,7 +993,7 @@
   {
     "callsign": "HG1RUG",
     "qth": "Győr",
-    "locator": "JN87TQ",
+    "locator": "JN87TQ56gn",
     "asl_m": 155,
     "rx_khz": "439275.0",
     "tx_khz": "431675.0",
@@ -1011,7 +1011,7 @@
   {
     "callsign": "HG1RUI",
     "qth": "Alpokalja",
-    "locator": "JN87FJ",
+    "locator": "JN87FJ75ah",
     "asl_m": 670,
     "rx_khz": "438375.0",
     "tx_khz": "430775.0",
@@ -1029,7 +1029,7 @@
   {
     "callsign": "HG1RUJ",
     "qth": "Szombathely",
-    "locator": "JN87HF",
+    "locator": "JN87HF07ha",
     "asl_m": 291,
     "rx_khz": "439312.5",
     "tx_khz": "431712.5",
@@ -1047,7 +1047,7 @@
   {
     "callsign": "HG2RUE",
     "qth": "Kab-hegy",
-    "locator": "JN87TB",
+    "locator": "JN87TB81TE",
     "asl_m": 680,
     "rx_khz": "438300.0",
     "tx_khz": "430700.0",
@@ -1063,7 +1063,7 @@
   {
     "callsign": "HG2RUG",
     "qth": "Gerecse",
-    "locator": "JN97FQ",
+    "locator": "JN97FQ92",
     "asl_m": 708,
     "rx_khz": "438662.5",
     "tx_khz": "431062.5",
@@ -1079,7 +1079,7 @@
   {
     "callsign": "HG2RUI",
     "qth": "Esztergom (Vaskapu-hegy)",
-    "locator": "JN97JS",
+    "locator": "JN97JS28",
     "asl_m": 400,
     "rx_khz": "439000.0",
     "tx_khz": "431400.0",
@@ -1095,7 +1095,7 @@
   {
     "callsign": "HG2RUJ",
     "qth": "Tatabánya",
-    "locator": "JN97FN",
+    "locator": "JN97FN07kq",
     "asl_m": 200,
     "rx_khz": "438200.0",
     "tx_khz": "430600.0",
@@ -1111,7 +1111,7 @@
   {
     "callsign": "HG2RUK",
     "qth": "Kab-hegy",
-    "locator": "JN87TB",
+    "locator": "JN87TB81th",
     "asl_m": 620,
     "rx_khz": "438300.0",
     "tx_khz": "430700.0",
@@ -1127,7 +1127,7 @@
   {
     "callsign": "HG3RUF",
     "qth": "Gyugypuszta",
-    "locator": "JN86XT",
+    "locator": "JN86XT13OV",
     "asl_m": 330,
     "rx_khz": "439275.0",
     "tx_khz": "431675.0",
@@ -1143,7 +1143,7 @@
   {
     "callsign": "HG3RUG",
     "qth": "Pécs (Hosszúhetény, Hármashegy)",
-    "locator": "JN96EE",
+    "locator": "JN96EE02LN",
     "asl_m": 625,
     "rx_khz": "438325.0",
     "tx_khz": "430725.0",
@@ -1175,7 +1175,7 @@
   {
     "callsign": "HG5RUC",
     "qth": "Budapest",
-    "locator": "JN97LM",
+    "locator": "JN97LM60sf",
     "asl_m": 528,
     "rx_khz": "438500.0",
     "tx_khz": "430900.0",
@@ -1191,7 +1191,7 @@
   {
     "callsign": "HG6RUC",
     "qth": "Kékestető",
-    "locator": "KN07AU",
+    "locator": "KN07AU19og",
     "asl_m": 1037,
     "rx_khz": "438575.0",
     "tx_khz": "430975.0",
@@ -1207,7 +1207,7 @@
   {
     "callsign": "HG6RUD",
     "qth": "Hatvan",
-    "locator": "JN97UQ",
+    "locator": "JN97UQ33nl",
     "asl_m": 188,
     "rx_khz": "438225.0",
     "tx_khz": "430625.0",
@@ -1241,7 +1241,7 @@
   {
     "callsign": "HG7RUG",
     "qth": "Dobogókő",
-    "locator": "JN97KR",
+    "locator": "JN97KR82",
     "asl_m": 750,
     "rx_khz": "438525.0",
     "tx_khz": "430925.0",
@@ -1273,7 +1273,7 @@
   {
     "callsign": "HG8RUE",
     "qth": "Gyula",
-    "locator": "KN06PP",
+    "locator": "KN06PP16ag",
     "asl_m": 141,
     "rx_khz": "438225.0",
     "tx_khz": "430625.0",
@@ -1289,7 +1289,7 @@
   {
     "callsign": "HG8RUF",
     "qth": "Szeged",
-    "locator": "KN06BG",
+    "locator": "KN06BG75KA",
     "asl_m": 215,
     "rx_khz": "438750.0",
     "tx_khz": "431150.0",
@@ -1305,7 +1305,7 @@
   {
     "callsign": "HG8RUG",
     "qth": "Sarkad",
-    "locator": "KN06QR",
+    "locator": "KN06QR58re",
     "asl_m": 113,
     "rx_khz": "438475.0",
     "tx_khz": "430875.0",
@@ -1321,7 +1321,7 @@
   {
     "callsign": "HG8RUH",
     "qth": "Csongrád",
-    "locator": "KN06BQ",
+    "locator": "KN06BQ69vl",
     "asl_m": 105,
     "rx_khz": "438250.0",
     "tx_khz": "430650.0",
@@ -1337,7 +1337,7 @@
   {
     "callsign": "HG8RUI",
     "qth": "Rém",
-    "locator": "JN96NG",
+    "locator": "JN96NG60ic",
     "asl_m": 185,
     "rx_khz": "438225.0",
     "tx_khz": "430625.0",
@@ -1353,7 +1353,7 @@
   {
     "callsign": "HG9RUE",
     "qth": "Kis-kőhát (Bükk)",
-    "locator": "KN08FB",
+    "locator": "KN08FB85gw",
     "asl_m": 978,
     "rx_khz": "438550.0",
     "tx_khz": "430950.0",
@@ -1369,7 +1369,7 @@
   {
     "callsign": "HG5RUA",
     "qth": "Budapest",
-    "locator": "JN97MN",
+    "locator": "JN97MN02",
     "asl_m": 477,
     "rx_khz": "438825.0",
     "tx_khz": "431225.0",
@@ -1385,7 +1385,7 @@
   {
     "callsign": "HG5RVB",
     "qth": "Budapest (Svábhegy)",
-    "locator": "JN97LM",
+    "locator": "JN97LM60sh",
     "asl_m": 500,
     "rx_khz": "145600.0",
     "tx_khz": "145000.0",
@@ -1401,7 +1401,7 @@
   {
     "callsign": "HG2RUF",
     "qth": "Gerecse",
-    "locator": "JN97FQ",
+    "locator": "JN97FQ92hg",
     "asl_m": 713,
     "rx_khz": "438275.0",
     "tx_khz": "430675.0",
@@ -1417,7 +1417,7 @@
   {
     "callsign": "HG3RUE",
     "qth": "Fonyód (Balaton)",
-    "locator": "JN86SR",
+    "locator": "JN86SR57",
     "asl_m": 263,
     "rx_khz": "438450.0",
     "tx_khz": "430850.0",
@@ -1449,7 +1449,7 @@
   {
     "callsign": "HG6RUB",
     "qth": "Galyatető (Mátra)",
-    "locator": "JN97WV",
+    "locator": "JN97WV99",
     "asl_m": 1035,
     "rx_khz": "438375.0",
     "tx_khz": "430775.0",
@@ -1465,7 +1465,7 @@
   {
     "callsign": "HG7RUD",
     "qth": "Vác, Naszály",
-    "locator": "JN97NU",
+    "locator": "JN97NU50ij",
     "asl_m": 517,
     "rx_khz": "438450.0",
     "tx_khz": "430850.0",
@@ -1481,7 +1481,7 @@
   {
     "callsign": "HG7RUF",
     "qth": "Érd",
-    "locator": "JN97KJ",
+    "locator": "JN97KJ88mu",
     "asl_m": 235,
     "rx_khz": "438425.0",
     "tx_khz": "430825.0",
