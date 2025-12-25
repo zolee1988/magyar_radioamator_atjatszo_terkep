@@ -21,7 +21,8 @@
 
 <body>
 
-<div class="header">
+<!-- BAL OLDALI FEJLÉC -->
+<div class="header-left">
   <div class="title">Magyarországi VHF és UHF rádióamatőr átjátszók térképe</div>
   <div class="subtitle">készítette HG4ZKZ Zoli, HA2TO Árpi adatbázisa alapján</div>
   <div class="source">
@@ -37,13 +38,8 @@
   </div>
 </div>
 
-  
-
-
-<div id="map"></div>
-
-<!-- ÚJ közös alsó panel -->
-<div id="bottomPanel">
+<!-- JOBB OLDALI PANEL -->
+<div class="header-right">
   <div class="legend">
     <b>Jelmagyarázat</b><br>
     <span class="dot active"></span> aktív<br>
@@ -61,15 +57,12 @@
   </div>
 </div>
 
-<!-- Leaflet JS -->
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<div id="map"></div>
 
-<!-- MarkerCluster JS -->
-<script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
-
-<!-- Saját JS -->
+<!-- JS-ek változatlanok -->
 <script src="locator.js"></script>
 <script src="map.js"></script>
 
 </body>
+
 </html>
