@@ -18,7 +18,7 @@
   {
     "callsign": "HG0RUA",
     "qth": "Debrecen",
-    "locator": "KN07TM",
+    "locator": "KN07TM55",
     "asl_m": 157,
     "rx_khz": "438625.0",
     "tx_khz": "431025.0",
@@ -67,7 +67,7 @@
   {
     "callsign": "HG0RVA",
     "qth": "Debrecen",
-    "locator": "KN07TN",
+    "locator": "KN07TN53",
     "asl_m": 157,
     "rx_khz": "145000.0",
     "tx_khz": "145600.0",
@@ -438,7 +438,7 @@
   {
     "callsign": "HG4RUC",
     "qth": "Székesfehérvár",
-    "locator": "JN97FE",
+    "locator": "JN97FE55mv",
     "asl_m": 179,
     "rx_khz": "438750.0",
     "tx_khz": "431150.0",
@@ -503,7 +503,7 @@
   {
     "callsign": "HG5RVA",
     "qth": "Gerecse",
-    "locator": "JN97FQ",
+    "locator": "JN97FQ92",
     "asl_m": 708,
     "rx_khz": "145675.0",
     "tx_khz": "145075.0",
@@ -925,7 +925,7 @@
   {
     "callsign": "HG0RUD",
     "qth": "Debrecen",
-    "locator": "KN07TN",
+    "locator": "KN07TN53",
     "asl_m": 185,
     "rx_khz": "438425.0",
     "tx_khz": "430825.0",
