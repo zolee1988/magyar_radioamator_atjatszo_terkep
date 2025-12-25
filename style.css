@@ -12,72 +12,77 @@ html, body {
   height: 100vh;
 }
 
-/* EGYSÉGES FELSŐ PANEL */
-.top-panel {
+/* Felső fejléc – PMR-stílus */
+.header {
   position: absolute;
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
-
-  width: 90%;
-  max-width: 1400px;
-
+  width: 80%;
   background: rgba(0, 0, 0, 0.55);
   color: #fff;
-  padding: 18px 24px;
-  border-radius: 10px;
+  padding: 14px 20px;
+  border-radius: 8px;
   z-index: 1000;
-  backdrop-filter: blur(6px);
-
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
+  backdrop-filter: blur(4px);
+  text-align: center;
 }
 
-/* BAL OSZLOP */
-.top-panel .left {
-  flex: 1;
-}
-
-.top-panel .title {
+/* Tipográfia */
+.header .title {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 6px;
 }
 
-.top-panel .subtitle,
-.top-panel .source,
-.top-panel .updated,
-.top-panel .support {
+.header .subtitle,
+.header .source,
+.header .updated,
+.header .support {
   font-size: 18px;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   line-height: 1.4;
 }
 
-.top-panel a {
+/* Linkek a fejlécben */
+.header a {
   color: #aee2ff;
   text-decoration: none;
 }
 
-.top-panel a:hover {
+.header a:hover {
   text-decoration: underline;
 }
 
-.top-panel .support img {
+/* PayPal gomb igazítása */
+.header .support img {
   vertical-align: middle;
   margin-left: 6px;
 }
 
-/* JOBB OSZLOP */
-.top-panel .right {
-  width: 260px;
+/* Alsó panel – PMR-stílusú overlay */
+#bottomPanel {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 8px;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 /* Jelmagyarázat */
 .legend {
   font-size: 18px;
   line-height: 1.4;
-  margin-bottom: 12px;
 }
 
 .legend .dot {
@@ -106,20 +111,21 @@ html, body {
   cursor: pointer;
 }
 
-/* Popup nagyítás */
+/* Popup nagyítás – mint a PMR-es térképen */
 .leaflet-popup-content {
   font-size: 18px;
   line-height: 1.4;
 }
 
 /* Mobilbarát */
-@media (max-width: 800px) {
-  .top-panel {
-    flex-direction: column;
+@media (max-width: 600px) {
+  .header, #bottomPanel {
     width: 95%;
+    padding: 12px 16px;
   }
 
-  .top-panel .right {
-    width: 100%;
+  #bottomPanel {
+    flex-direction: column;
+    text-align: center;
   }
 }
