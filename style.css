@@ -12,77 +12,70 @@ html, body {
   height: 100vh;
 }
 
-/* Felső fejléc – PMR-stílus */
-.header {
+/* BAL OLDALI FEJLÉC */
+.header-left {
   position: absolute;
   top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
+  left: 10px;
+  width: 360px;
+
   background: rgba(0, 0, 0, 0.55);
   color: #fff;
   padding: 14px 20px;
   border-radius: 8px;
   z-index: 1000;
   backdrop-filter: blur(4px);
-  text-align: center;
 }
 
-/* Tipográfia */
-.header .title {
+.header-left .title {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 6px;
 }
 
-.header .subtitle,
-.header .source,
-.header .updated,
-.header .support {
+.header-left .subtitle,
+.header-left .source,
+.header-left .updated,
+.header-left .support {
   font-size: 18px;
   margin-bottom: 4px;
   line-height: 1.4;
 }
 
-/* Linkek a fejlécben */
-.header a {
+.header-left a {
   color: #aee2ff;
   text-decoration: none;
 }
 
-.header a:hover {
+.header-left a:hover {
   text-decoration: underline;
 }
 
-/* PayPal gomb igazítása */
-.header .support img {
+.header-left .support img {
   vertical-align: middle;
   margin-left: 6px;
 }
 
-/* Alsó panel – PMR-stílusú overlay */
-#bottomPanel {
+/* JOBB OLDALI PANEL */
+.header-right {
   position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
+  top: 10px;
+  right: 10px;
+  width: 260px;
+
   background: rgba(0, 0, 0, 0.55);
   color: #fff;
   padding: 14px 20px;
   border-radius: 8px;
   z-index: 1000;
   backdrop-filter: blur(4px);
-
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
 }
 
 /* Jelmagyarázat */
 .legend {
   font-size: 18px;
   line-height: 1.4;
+  margin-bottom: 12px;
 }
 
 .legend .dot {
@@ -111,7 +104,7 @@ html, body {
   cursor: pointer;
 }
 
-/* Popup nagyítás – mint a PMR-es térképen */
+/* Popup nagyítás */
 .leaflet-popup-content {
   font-size: 18px;
   line-height: 1.4;
@@ -119,13 +112,17 @@ html, body {
 
 /* Mobilbarát */
 @media (max-width: 600px) {
-  .header, #bottomPanel {
-    width: 95%;
-    padding: 12px 16px;
+  .header-left,
+  .header-right {
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+    margin-bottom: 10px;
   }
 
-  #bottomPanel {
-    flex-direction: column;
-    text-align: center;
+  .header-right {
+    top: auto;
+    bottom: 10px;
   }
 }
