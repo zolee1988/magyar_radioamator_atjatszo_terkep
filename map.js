@@ -126,34 +126,36 @@ fetch("repeaters.json")
 
     // SZŰRŐ LOGIKA
     function applyFilters() {
-      const showActive = document.getElementById("filterActive").checked;
-      const showInactive = document.getElementById("filterInactive").checked;
-      const showAnalog = document.getElementById("filterAnalog").checked;
-      const showDigital = document.getElementById("filterDigital").checked;
+  const showActive = document.getElementById("filterActive").checked;
+  const showInactive = document.getElementById("filterInactive").checked;
+  const showAnalog = document.getElementById("filterAnalog").checked;
+  const showDigital = document.getElementById("filterDigital").checked;
 
-      markers.clearLayers();
+  markers.clearLayers();
 
-      allMarkers.forEach(obj => {
-        const rep = obj.rep;
+  allMarkers.forEach(obj => {
+    const rep = obj.rep;
 
-        const isActive = rep.status.toUpperCase() === "ACTIVE";
-        const modes = rep.mode.map(m => m.toUpperCase());
-        const isAnalog = modes.includes("FM") || modes.includes("ANALOG");
-        const isDigital = modes.some(m => ["DMR", "C4FM", "DSTAR", "DIGITAL"].includes(m));
+    const isActive = rep.status.toUpperCase() === "ACTIVE";
+    const modes = rep.mode.map(m => m.toUpperCase());
+    const isAnalog = modes.includes("FM") || modes.includes("ANALOG");
+    const isDigital = modes.some(m => ["DMR", "C4FM", "DSTAR", "DIGITAL"].includes(m));
 
-        // Aktív / inaktív szűrés
-        if (!isActive && !showInactive) return;
-        if (isActive && !showActive) return;
+    // Aktív / inaktív szűrés
+    if (!isActive && !showInactive) return;
+    if (isActive && !showActive) return;
 
-        // Analóg / digitális szűrés – elég, ha legalább egy engedélyezett
-        const analogAllowed = !isAnalog || showAnalog;
-        const digitalAllowed = !isDigital || showDigital;
+    // Analóg / digitális szűrés – HELYES LOGIKA
+    const modeAllowed =
+      (isAnalog && showAnalog) ||
+      (isDigital && showDigital);
 
-        if (!analogAllowed && !digitalAllowed) return;
+    if (!modeAllowed) return;
 
-        markers.addLayer(obj.marker);
-      });
-    }
+    markers.addLayer(obj.marker);
+  });
+}
+
 
     // SZŰRŐ ESEMÉNYEK – az új panelre mutat
     document.querySelectorAll("#bottomPanel input[type='checkbox']").forEach(cb => {
