@@ -35,9 +35,20 @@ function locatorToLatLon(locator) {
     lat += (locator.charCodeAt(9) - A) / 5760;
   }
 
-  // Középpont eltolás
-  lon += (locator.length >= 6 ? 1/12 : locator.length >= 4 ? 1 : 10);
-  lat += (locator.length >= 6 ? 1/24 : locator.length >= 4 ? 0.5 : 5);
+  // Középpont eltolás a lokátor hosszától függően
+  if (locator.length >= 10) {
+    lon += 1 / 5760;
+    lat += 1 / 11520;
+  } else if (locator.length >= 8) {
+    lon += 1 / 240;
+    lat += 1 / 480;
+  } else if (locator.length >= 6) {
+    lon += 1 / 12;
+    lat += 1 / 24;
+  } else if (locator.length >= 4) {
+    lon += 1;
+    lat += 0.5;
+  }
 
   return { lat, lon };
 }
