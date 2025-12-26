@@ -153,7 +153,8 @@ html, body {
     width: 80%;
     padding: 10px 14px;
     flex-direction: row;     /* egymás mellett marad */
-    justify-content: center; /* középre igazított panel */
+//**    justify-content: center; /* középre igazított panel */
+    justify-content: space-between;
     gap: 20px;
     text-align: left;        /* <<< EZ A LÉNYEG: balra zárás */
   }
