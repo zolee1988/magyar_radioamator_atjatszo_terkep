@@ -159,3 +159,23 @@ html, body {
     text-align: center;
   }
 }
+
+@media (max-width: 600px) {
+  #bottomPanel {
+    width: 95%;
+    padding: 10px 14px;
+    flex-direction: row;     /* EGYESÍTÉS: maradjon egymás mellett */
+    justify-content: center; /* középre igazítva */
+    gap: 20px;
+    text-align: center;
+  }
+
+  /* A két blokk ne legyen széles */
+  .legend,
+  .filters {
+    width: auto;
+    display: inline-block;
+    margin: 0;
+  }
+}
+
