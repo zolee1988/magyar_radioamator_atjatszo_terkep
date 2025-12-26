@@ -25,13 +25,11 @@ html, body {
   border-radius: 8px;
   z-index: 1000;
   backdrop-filter: blur(4px);
-
-  display: block;      /* flex OFF */
-  text-align: center;  /* középre igazítás */
+  display: block;
+  text-align: center;
 }
 
-
-/* Fejléc tipográfia – PMR-rel egységesítve */
+/* Fejléc tipográfia */
 .header .title {
   font-size: 16px;
   font-weight: bold;
@@ -47,7 +45,7 @@ html, body {
   line-height: 1.3;
 }
 
-/* Linkek a fejlécben */
+/* Fejléc linkek */
 .header a {
   color: #aee2ff;
   text-decoration: none;
@@ -57,7 +55,7 @@ html, body {
   text-decoration: underline;
 }
 
-/* PayPal gomb igazítása – PMR méret */
+/* PayPal gomb */
 .header .support img {
   height: 14px;
   vertical-align: middle;
@@ -77,18 +75,19 @@ html, body {
   border-radius: 8px;
   z-index: 1000;
   backdrop-filter: blur(4px);
-
   display: flex;
   justify-content: space-between;
   gap: 20px;
 }
 
-/* Jelmagyarázat – egységes 12px */
-.legend {
+/* Jelmagyarázat + szűrők – egységes tipográfia */
+.legend,
+.filters {
   font-size: 12px;
   line-height: 1.3;
 }
 
+/* Jelmagyarázat pontok */
 .legend .dot {
   height: 12px;
   width: 12px;
@@ -97,28 +96,17 @@ html, body {
   margin-right: 6px;
 }
 
-.legend .active {
-  background: #4caf50;
-}
+.legend .active { background: #4caf50; }
+.legend .inactive { background: #f44336; }
 
-.legend .inactive {
-  background: #f44336;
-}
-
-/* Szűrők – egységes 12px */
-.filters {
-  font-size: 12px;
-  line-height: 1.3;
-}
-
+/* Szűrők */
 .filters label {
   cursor: pointer;
 }
 
-/* --- Popup kompakt mobilbarát stílus – PMR-rel egységesítve --- */
-
+/* Popup – PMR-rel egységesítve */
 .leaflet-popup-content {
-  font-family: "Inter", sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 12px;
   line-height: 1.3;
 }
@@ -141,29 +129,35 @@ html, body {
   white-space: nowrap;
 }
 
-/* Popup táblázat igazítás – hosszú szöveg ne csússzon el */
 .leaflet-popup-content table th,
 .leaflet-popup-content table td {
   vertical-align: top;
 }
 
+/* PMR-stílusú elválasztó vonal */
+.leaflet-popup-content hr {
+  border: none;
+  height: 2px;
+  background: #2A81CB;
+  margin: 6px 0;
+  border-radius: 2px;
+}
 
+/* Mobilnézet */
 @media (max-width: 600px) {
   #bottomPanel {
     width: 80%;
     padding: 10px 14px;
-    flex-direction: row;     /* egymás mellett marad */
-//**    justify-content: center; /* középre igazított panel */
+    flex-direction: row;
     justify-content: space-between;
     gap: 20px;
-    text-align: left;        /* <<< EZ A LÉNYEG: balra zárás */
+    text-align: left;
   }
 
   .legend,
   .filters {
     width: auto;
     display: inline-block;
-    margin: 0;
-    text-align: left;        /* biztos ami biztos */
+    text-align: left;
   }
 }
