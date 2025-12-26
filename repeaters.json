@@ -18,7 +18,7 @@
   {
     "callsign": "HG0RUA",
     "qth": "Debrecen",
-    "locator": "KN07TM55",
+    "locator": "KN07TM55OM",
     "asl_m": 157,
     "rx_khz": "438625.0",
     "tx_khz": "431025.0",
@@ -67,7 +67,7 @@
   {
     "callsign": "HG0RVA",
     "qth": "Debrecen",
-    "locator": "KN07TN53",
+    "locator": "KN07TN53BU",
     "asl_m": 157,
     "rx_khz": "145000.0",
     "tx_khz": "145600.0",
