@@ -487,7 +487,7 @@
   {
     "callsign": "HG5RUX",
     "qth": "Budapest",
-    "locator": "",
+    "locator": "JN97ML49tl",
     "asl_m": 0,
     "rx_khz": "433700.0",
     "tx_khz": "70475.0",
@@ -498,7 +498,7 @@
       "FM"
     ],
     "status": "INACTIVE",
-    "notes": "Echolink: 447262"
+    "notes": "2017.12.21.	Üzemen kívül."
   },
   {
     "callsign": "HG5RVA",
