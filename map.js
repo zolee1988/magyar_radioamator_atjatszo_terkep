@@ -176,25 +176,43 @@ fetch("beacons.json")
       const isActive = b.status.toUpperCase().includes("AKT");
       const icon = isActive ? icons.beacon_active : icons.beacon_inactive;
 
-      const popup = `
-        <div class="popup">
-          <div class="title">${b.callsign}</div>
-          <div class="qth">${b.qth_name}</div>
+      const ha2toLink = `http://ha2to.orbel.hu/content/beacons/hu/${b.callsign}.html`;
 
-          <table>
-            <tr><th>Frekvencia:</th><td>${b.frequency_mhz} MHz</td></tr>
-            <tr><th>Lokátor:</th><td>${b.locator}</td></tr>
-            <tr><th>ASL:</th><td>${b.asl_m} m</td></tr>
-            <tr><th>AGL:</th><td>${b.agl_m} m</td></tr>
-            <tr><th>Moduláció:</th><td>${b.modulation}</td></tr>
-            <tr><th>Antenna:</th><td>${b.antenna}</td></tr>
-            <tr><th>Polarizáció:</th><td>${b.polarization}</td></tr>
-            <tr><th>Teljesítmény:</th><td>${b.power_w} W</td></tr>
-            <tr><th>Állapot:</th><td>${b.status}</td></tr>
-            <tr><th>Frissítve:</th><td>${b.last_update}</td></tr>
-          </table>
-        </div>
-      `;
+const popup = `
+  <div class="popup">
+    <div class="title">
+      <a href="${ha2toLink}" target="_blank">${b.callsign}</a>
+    </div>
+
+    <div class="qth">${b.qth_name}</div>
+
+    <table>
+      <tr><th>Lokátor:</th><td>${b.locator}</td></tr>
+      <tr><th>ASL:</th><td>${b.asl_m} m</td></tr>
+      <tr><th>AGL:</th><td>${b.agl_m} m</td></tr>
+    </table>
+
+    <hr>
+
+    <b>Üzemmód:</b> ${b.modulation}
+
+    <hr>
+
+    <table>
+      <tr><th>Frekvencia:</th><td>${b.frequency_mhz} MHz</td></tr>
+      
+      <tr><th>Antenna:</th><td>${b.antenna}</td></tr>
+      <tr><th>Polarizáció:</th><td>${b.polarization}</td></tr>
+      <tr><th>Teljesítmény:</th><td>${b.power_w} W</td></tr>
+    </table>
+
+    <hr>
+
+    <b>Állapot:</b> ${b.status}<br>
+    <b>Frissítve:</b> ${b.last_update}
+  </div>
+`;
+
 
       const marker = L.marker([lat, lon], { icon }).bindPopup(popup);
 
