@@ -86,37 +86,47 @@ fetch("repeaters.json")
       const ha2toLink = `http://ha2to.orbel.hu/content/repeaters/hu/${rep.callsign}.html`;
 
       const popupHtml = `
-        <div style="font-family: Arial, sans-serif; font-size: 13px; line-height: 1.4;">
-          <div style="font-size: 16px; font-weight: bold; margin-bottom: 4px;">
-            <a href="${ha2toLink}" target="_blank" style="color: #0066cc; text-decoration: none;">
-              ${rep.callsign}
-            </a>
-          </div>
+  <div class="popup">
+    
+    <div class="title">
+      <a href="${ha2toLink}" target="_blank">
+        ${rep.callsign}
+      </a>
+    </div>
 
-          <div style="margin-bottom: 6px;">${rep.qth}</div>
+    <div class="qth">${rep.qth}</div>
 
-          <div style="margin-bottom: 8px;">
-            <b>Lokátor:</b> ${rep.locator}<br>
-            <b>ASL:</b> ${rep.asl_m} m
-          </div>
+    <table>
+      <tr><th>Lokátor:</th><td>${rep.locator}</td></tr>
+      <tr><th>ASL:</th><td>${rep.asl_m} m</td></tr>
+    </table>
 
-          <div style="border-top: 1px solid #ccc; margin: 6px 0;"></div>
+    <hr>
 
-          <b>Üzemmódok:</b> ${rep.mode.join(", ")}<br>
+    <b>Üzemmódok:</b> ${rep.mode.join(", ")}
 
-          <div style="border-top: 1px solid #ccc; margin: 6px 0;"></div>
+    <hr>
 
-          <b>RX:</b> ${rep.rx_khz} kHz<br>
-          <b>TX:</b> ${rep.tx_khz} kHz<br>
-          <b>Shift:</b> ${rep.shift_khz} kHz<br>
-          ${toneOrCc}
+    <table>
+      <tr><th>RX:</th><td>${rep.rx_khz} kHz</td></tr>
+      <tr><th>TX:</th><td>${rep.tx_khz} kHz</td></tr>
+      <tr><th>Shift:</th><td>${rep.shift_khz} kHz</td></tr>
+      ${toneOrCc ? `<tr><th>Tone/CC:</th><td>${toneOrCc}</td></tr>` : ""}
+    </table>
 
-          ${rep.notes ? `<div style="border-top: 1px solid #ccc; margin: 6px 0;"></div><b>Megjegyzés:</b><br> ${rep.notes.replace(/\n/g, "<br>")}<br>` : ""}
+    ${rep.notes ? `
+      <hr>
+      <b>Megjegyzés:</b>
+      ${rep.notes.replace(/\n/g, "<br>")}
+    ` : ""}
 
-          <div style="border-top: 1px solid #ccc; margin: 6px 0;"></div>
-          <b>Állapot:</b> ${statusHu}
-        </div>
-      `;
+    <hr>
+
+    <b>Állapot:</b> ${statusHu}
+
+  </div>
+`;
+
 
       const marker = L.marker([lat, lon], { icon: pickIcon(rep) }).bindPopup(popupHtml);
 
