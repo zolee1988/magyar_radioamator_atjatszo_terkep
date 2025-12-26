@@ -42,24 +42,38 @@
 
 <div id="map"></div>
 
-<!-- ÚJ közös alsó panel -->
+<!-- alsó panel -->
 <div id="bottomPanel">
   <div class="legend">
     <b>Jelmagyarázat</b><br>
     <span class="dot active"></span> aktív<br>
     <span class="dot inactive"></span> inaktív<br>
-    <b>A</b> analóg (FM)<br>
-    <b>D</b> digitális (DMR / C4FM / D‑STAR)
+    <b>A</b> analóg átjátszó (FM)<br>
+    <b>D</b> digitális átjátszó (DMR / C4FM / D‑STAR)<br>
+    <b>B</b> jeladó (beacon)
   </div>
 
   <div class="filters">
     <b>Szűrők</b><br>
+
+    <!-- Állapot -->
     <label><input type="checkbox" id="filterActive" checked> Aktív</label><br>
     <label><input type="checkbox" id="filterInactive" checked> Inaktív</label><br>
+
+    <hr>
+
+    <!-- Típus -->
+    <label><input type="checkbox" id="filterRepeaters" checked> Átjátszók</label><br>
+    <label><input type="checkbox" id="filterBeacons" checked> Jeladók</label><br>
+
+    <hr>
+
+    <!-- Üzemmód (csak átjátszókra) -->
     <label><input type="checkbox" id="filterAnalog" checked> Analóg</label><br>
     <label><input type="checkbox" id="filterDigital" checked> Digitális</label>
   </div>
 </div>
+
 
 <!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
