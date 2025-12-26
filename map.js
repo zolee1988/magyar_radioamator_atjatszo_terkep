@@ -228,16 +228,6 @@ fetch("beacons.json")
   });
 
 
-
-      const marker = L.marker([lat, lon], { icon }).bindPopup(popup);
-
-      allBeacons.push({ marker, b });
-      beaconCluster.addLayer(marker);
-    });
-
-    map.addLayer(beaconCluster);
-  });
-
 /* ────────────────────────────────────────────────
    SZŰRŐ LOGIKA
    ──────────────────────────────────────────────── */
@@ -284,7 +274,7 @@ function applyFilters() {
     allBeacons.forEach(obj => {
       const b = obj.b;
 
-      const isActive = b.status.toUpperCase().includes("AKT");
+      const isActive = b.status.toUpperCase() === "ACTIVE";
 
       if (!isActive && !showInactive) return;
       if (isActive && !showActive) return;
