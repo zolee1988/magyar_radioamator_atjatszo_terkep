@@ -11,7 +11,7 @@
     "polarization": "V",
     "power_w": 1,
     "erp_dbw": "3,00",
-    "status": "Aktív",
+    "status": "ACTIVE",
     "last_update": "2010.03.18."
   },
   {
@@ -26,7 +26,7 @@
     "polarization": "H",
     "power_w": 20,
     "erp_dbw": "",
-    "status": "Aktív",
+    "status": "ACTIVE",
     "last_update": "2020.07.23."
   },
   {
@@ -41,7 +41,7 @@
     "polarization": "V",
     "power_w": 1,
     "erp_dbw": "",
-    "status": "Aktív",
+    "status": "ACTIVE",
     "last_update": "2025.06.24."
   },
   {
@@ -56,7 +56,7 @@
     "polarization": "H",
     "power_w": 5,
     "erp_dbw": "",
-    "status": "Aktív",
+    "status": "ACTIVE",
     "last_update": "2020.05.18."
   },
   {
@@ -71,7 +71,7 @@
     "polarization": "H",
     "power_w": 5,
     "erp_dbw": "",
-    "status": "Aktív",
+    "status": "ACTIVE",
     "last_update": "2018.02.28."
   },
   {
@@ -86,7 +86,7 @@
     "polarization": "H",
     "power_w": 10,
     "erp_dbw": "",
-    "status": "Aktív",
+    "status": "ACTIVE",
     "last_update": ""
   },
   {
@@ -101,7 +101,7 @@
     "polarization": "H",
     "power_w": 10,
     "erp_dbw": "",
-    "status": "Aktív",
+    "status": "ACTIVE",
     "last_update": "2020.09.10."
   },
   {
@@ -116,7 +116,7 @@
     "polarization": "H",
     "power_w": 15,
     "erp_dbw": "",
-    "status": "Aktív",
+    "status": "ACTIVE",
     "last_update": ""
   },
   {
@@ -131,7 +131,7 @@
     "polarization": "H",
     "power_w": 3,
     "erp_dbw": "",
-    "status": "Aktív",
+    "status": "ACTIVE",
     "last_update": "2023.03.02."
   },
   {
@@ -146,7 +146,7 @@
     "polarization": "H",
     "power_w": 5,
     "erp_dbw": "6,99",
-    "status": "Aktív",
+    "status": "ACTIVE",
     "last_update": "2023.03.01."
   },
   {
@@ -161,7 +161,7 @@
     "polarization": "H",
     "power_w": 3,
     "erp_dbw": "",
-    "status": "Aktív",
+    "status": "ACTIVE",
     "last_update": "2023.03.02."
   },
   {
@@ -176,7 +176,7 @@
     "polarization": "V",
     "power_w": 5,
     "erp_dbw": "",
-    "status": "Inaktív",
+    "status": "INACTIVE",
     "last_update": "2023.03.02."
   },
   {
@@ -191,7 +191,7 @@
     "polarization": "H",
     "power_w": 2,
     "erp_dbw": "3,00",
-    "status": "Aktív",
+    "status": "ACTIVE",
     "last_update": "2025.10.21."
   },
   {
@@ -206,7 +206,7 @@
     "polarization": "H",
     "power_w": 10,
     "erp_dbw": "",
-    "status": "Aktív",
+    "status": "ACTIVE",
     "last_update": "2020.07.06."
   },
   {
@@ -221,7 +221,7 @@
     "polarization": "H",
     "power_w": 5,
     "erp_dbw": "",
-    "status": "Aktív",
+    "status": "ACTIVE",
     "last_update": "2018.10.15."
   },
   {
@@ -236,7 +236,7 @@
     "polarization": "H",
     "power_w": 1,
     "erp_dbw": "",
-    "status": "Aktív",
+    "status": "ACTIVE",
     "last_update": "2019.07.17."
   },
   {
@@ -251,7 +251,7 @@
     "polarization": "H",
     "power_w": 1,
     "erp_dbw": "",
-    "status": "Aktív",
+    "status": "ACTIVE",
     "last_update": ""
   },
   {
@@ -266,7 +266,7 @@
     "polarization": "H",
     "power_w": 2,
     "erp_dbw": "2,00",
-    "status": "Aktív",
+    "status": "ACTIVE",
     "last_update": "2023.10.16."
   },
   {
@@ -281,7 +281,7 @@
     "polarization": "V",
     "power_w": 1,
     "erp_dbw": "",
-    "status": "Inaktív",
+    "status": "INACTIVE",
     "last_update": "2023.03.02."
   },
   {
@@ -296,7 +296,7 @@
     "polarization": "H",
     "power_w": 1.5,
     "erp_dbw": "",
-    "status": "Aktív",
+    "status": "ACTIVE",
     "last_update": ""
   },
   {
@@ -311,7 +311,7 @@
     "polarization": "H",
     "power_w": 3,
     "erp_dbw": "",
-    "status": "Aktív",
+    "status": "ACTIVE",
     "last_update": ""
   },
   {
@@ -326,7 +326,7 @@
     "polarization": "H",
     "power_w": 1,
     "erp_dbw": "3,00",
-    "status": "Aktív",
+    "status": "ACTIVE",
     "last_update": ""
   },
   {
@@ -341,7 +341,7 @@
     "polarization": "H",
     "power_w": 2,
     "erp_dbw": "3,00",
-    "status": "Aktív",
+    "status": "ACTIVE",
     "last_update": "2023.09.28."
   },
   {
@@ -356,7 +356,7 @@
     "polarization": "H",
     "power_w": 0.8,
     "erp_dbw": "",
-    "status": "Aktív",
+    "status": "ACTIVE",
     "last_update": ""
   },
   {
@@ -371,7 +371,7 @@
     "polarization": "H",
     "power_w": 2,
     "erp_dbw": "0,00",
-    "status": "Aktív",
+    "status": "ACTIVE",
     "last_update": "2023.09.28."
   },
   {
@@ -386,7 +386,7 @@
     "polarization": "H",
     "power_w": 1,
     "erp_dbw": "3,00",
-    "status": "Javítás",
+    "status": "INACTIVE",
     "last_update": "2023.04.21."
   },
   {
@@ -401,7 +401,7 @@
     "polarization": "H",
     "power_w": 0.45,
     "erp_dbw": "",
-    "status": "Aktív",
+    "status": "ACTIVE",
     "last_update": ""
   },
   {
@@ -416,7 +416,7 @@
     "polarization": "H",
     "power_w": 0.5,
     "erp_dbw": "0,00",
-    "status": "Javítás",
+    "status": "INACTIVE",
     "last_update": "2023.04.21."
   },
   {
@@ -431,7 +431,7 @@
     "polarization": "H",
     "power_w": 2,
     "erp_dbw": "3,00",
-    "status": "Aktív",
+    "status": "ACTIVE",
     "last_update": "2023.09.28."
   },
   {
@@ -446,7 +446,7 @@
     "polarization": "H",
     "power_w": 5,
     "erp_dbw": "",
-    "status": "Aktív",
+    "status": "ACTIVE",
     "last_update": ""
   },
   {
@@ -461,7 +461,7 @@
     "polarization": "H",
     "power_w": 1,
     "erp_dbw": "3,00",
-    "status": "Inaktív",
+    "status": "INACTIVE",
     "last_update": "2023.03.02."
   },
   {
@@ -476,7 +476,7 @@
     "polarization": "H",
     "power_w": 1,
     "erp_dbw": "2,00",
-    "status": "Aktív",
+    "status": "ACTIVE",
     "last_update": "2023.09.28."
   },
   {
@@ -491,7 +491,7 @@
     "polarization": "H",
     "power_w": 0.1,
     "erp_dbw": "",
-    "status": "Inaktív",
+    "status": "INACTIVE",
     "last_update": "2019.11.06."
   }
 ]
