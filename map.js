@@ -173,7 +173,8 @@ fetch("beacons.json")
         lon += Math.cos(angle) * offset;
       }
 
-      const isActive = b.status.toUpperCase().includes("AKT");
+      const isActive = b.status.toUpperCase() === "ACTIVE";
+
       const icon = isActive ? icons.beacon_active : icons.beacon_inactive;
 
       const ha2toLink = `http://ha2to.orbel.hu/content/beacons/hu/${b.callsign}.html`;
