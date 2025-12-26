@@ -152,9 +152,26 @@ fetch("beacons.json")
 
     allBeacons = [];
 
+    // Lokátor duplikátumok kezelése
+    const beaconLocatorGroups = {};
     beacons.forEach(b => {
-      const { lat, lon } = locatorToLatLon(b.locator);
+      if (!beaconLocatorGroups[b.locator]) beaconLocatorGroups[b.locator] = [];
+      beaconLocatorGroups[b.locator].push(b);
+    });
+
+    beacons.forEach(b => {
+      let { lat, lon } = locatorToLatLon(b.locator);
       if (!lat || !lon || isNaN(lat) || isNaN(lon)) return;
+
+      // Duplikált lokátor eltolása
+      const group = beaconLocatorGroups[b.locator];
+      if (group.length > 1) {
+        const index = group.indexOf(b);
+        const offset = 0.001;
+        const angle = (index / group.length) * 2 * Math.PI;
+        lat += Math.sin(angle) * offset;
+        lon += Math.cos(angle) * offset;
+      }
 
       const isActive = b.status.toUpperCase().includes("AKT");
       const icon = isActive ? icons.beacon_active : icons.beacon_inactive;
