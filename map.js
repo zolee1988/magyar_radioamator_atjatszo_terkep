@@ -14,8 +14,12 @@ const icons = {
   fm_active: L.icon({ iconUrl: 'icons/fm_active.svg', iconSize: [32, 32] }),
   fm_inactive: L.icon({ iconUrl: 'icons/fm_inactive.svg', iconSize: [32, 32] }),
   dig_active: L.icon({ iconUrl: 'icons/digital_active.svg', iconSize: [32, 32] }),
-  dig_inactive: L.icon({ iconUrl: 'icons/digital_inactive.svg', iconSize: [32, 32] })
+  dig_inactive: L.icon({ iconUrl: 'icons/digital_inactive.svg', iconSize: [32, 32] }),
+
+  beacon_active: L.icon({ iconUrl: 'icons/beacon_active.svg', iconSize: [32, 32] }),
+  beacon_inactive: L.icon({ iconUrl: 'icons/beacon_inactive.svg', iconSize: [32, 32] })
 };
+
 
 // Ikonválasztás (FM prioritás)
 function pickIcon(rep) {
