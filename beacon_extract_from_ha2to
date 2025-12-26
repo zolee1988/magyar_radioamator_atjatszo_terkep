@@ -1,0 +1,31 @@
+Böngésző konzolból futtatható JS – teljes, kész script
+Nyisd meg ezt az oldalt:
+http://ha2to.orbel.hu/content/beacons/hu/index.html
+
+Nyomd meg:
+F12 → Console
+
+(() => {
+  const rows = Array.from(document.querySelectorAll("table tr")).slice(1); // első sor a fejléc
+
+  const beacons = rows.map(row => {
+    const cells = row.querySelectorAll("td");
+    return {
+      callsign: cells[0].innerText.trim(),
+      frequency_mhz: parseFloat(cells[1].innerText.replace(",", ".").trim()),
+      qth_name: cells[2].innerText.trim(),
+      locator: cells[3].innerText.trim(),
+      modulation: cells[4].innerText.trim(),
+      asl_m: parseInt(cells[5].innerText.trim(), 10),
+      agl_m: parseInt(cells[6].innerText.trim(), 10),
+      antenna: cells[7].innerText.trim(),
+      polarization: cells[8].innerText.trim(),
+      power_w: parseFloat(cells[9].innerText.replace(",", ".").trim()),
+      erp_dbw: cells[10].innerText.trim(),
+      status: cells[11].innerText.trim(),
+      last_update: cells[12].innerText.trim()
+    };
+  });
+
+  console.log(JSON.stringify(beacons, null, 2));
+})();
