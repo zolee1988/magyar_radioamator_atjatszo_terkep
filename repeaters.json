@@ -617,7 +617,7 @@
   {
     "callsign": "HG7RUI",
     "qth": "Őrbottyán, Menyecske-hegy",
-    "locator": "JN97PQ",
+    "locator": "JN97PQ55wq",
     "asl_m": 230,
     "rx_khz": "438612.5",
     "tx_khz": "431012.5",
@@ -1257,7 +1257,7 @@
   {
     "callsign": "HG7RUJ",
     "qth": "Őrbottyán, Menyecske-hegy",
-    "locator": "JN97PQ",
+    "locator": "JN97PQ55wq",
     "asl_m": 232,
     "rx_khz": "439312.5",
     "tx_khz": "431712.5",
