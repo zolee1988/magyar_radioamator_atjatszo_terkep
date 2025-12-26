@@ -1,11 +1,13 @@
-# Magyar Rádióamatőr Átjátszó Térkép
+# Magyar rádióamatőr átjátszó térkép
 
-Ez a projekt egy egyszerű, gyors webes térkép, amely a magyarországi rádióamatőr átjátszók helyét és alapadatait jeleníti meg.  
+Ez a projekt egy egyszerű, gyors webes térkép, amely a magyarországi rádióamatőr átjátszók és jeladók helyét és alapadatait jeleníti meg.
 
-**HA2TO Árpi weboldalán összegyűjtött magyarországi VHF és UHF rádióamatőr átjátszók térképes megjelenítése.**  
+**HA2TO Árpi weboldalán összegyűjtött magyarországi VHF és UHF rádióamatőr átjátszók és rádióamatőr jeladók térképes megjelenítése.**  
 Az adatokat innen másoltam:
 
 👉 http://ha2to.orbel.hu/content/repeaters/hu/index.html
+
+👉 http://ha2to.orbel.hu/content/beacons/hu/index.html
 
 A cél egy könnyen használható, áttekinthető és bárhonnan elérhető térkép, amely segíti a rádióamatőröket a mindennapi forgalmazásban és utazás közben.
 
@@ -13,8 +15,9 @@ A cél egy könnyen használható, áttekinthető és bárhonnan elérhető tér
 
 ## 📡 Mit tartalmaz a térkép?
 
-- Magyarországi rádióamatőr átjátszók megjelenítése térképen  
-- Analóg FM, DMR, C4FM és D‑Star átjátszók  
+- Magyarországi rádióamatőr átjátszók és adataik megjelenítése térképen
+- Magyarországi rádióamatőr jeladók és adataik megjelenítése térképen
+- Minimális szűrő, az áttekinthetőség érdekében
 - Felső információs fejléc (logó + cím + forrás + frissítési idő)  
 - Egyszerűen bővíthető adatstruktúra a későbbi frissítésekhez
 
