@@ -23,7 +23,8 @@ function pickIcon(rep) {
   const isActive = rep.status.toUpperCase() === "ACTIVE";
 
   const hasFM = modes.includes("FM") || modes.includes("ANALOG");
-  const hasDigital = modes.some(m => ["DMR", "C4FM", "DSTAR", "DIGITAL"].includes(m));
+  const hasDigital = modes.some(m => ["DMR", "C4FM", "DSTAR", "D-STAR", "DIGITAL"].includes(m));
+  
 
   if (hasFM) return isActive ? icons.fm_active : icons.fm_inactive;
   if (hasDigital) return isActive ? icons.dig_active : icons.dig_inactive;
