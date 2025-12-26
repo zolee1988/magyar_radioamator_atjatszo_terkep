@@ -20,15 +20,13 @@ const icons = {
   beacon_inactive: L.icon({ iconUrl: 'icons/beacon_inactive.svg', iconSize: [32, 32] })
 };
 
-
-// Ikonválasztás (FM prioritás)
+// Ikonválasztás átjátszókhoz
 function pickIcon(rep) {
   const modes = rep.mode.map(m => m.toUpperCase());
   const isActive = rep.status.toUpperCase() === "ACTIVE";
 
   const hasFM = modes.includes("FM") || modes.includes("ANALOG");
   const hasDigital = modes.some(m => ["DMR", "C4FM", "DSTAR", "D-STAR", "DIGITAL"].includes(m));
-  
 
   if (hasFM) return isActive ? icons.fm_active : icons.fm_inactive;
   if (hasDigital) return isActive ? icons.dig_active : icons.dig_inactive;
@@ -36,31 +34,37 @@ function pickIcon(rep) {
   return isActive ? icons.fm_active : icons.fm_inactive;
 }
 
-// JSON betöltése
+/* ────────────────────────────────────────────────
+   CLUSTEREK
+   ──────────────────────────────────────────────── */
+
+const repeaterCluster = L.markerClusterGroup();
+const beaconCluster = L.markerClusterGroup({ disableClusteringAtZoom: 12 });
+
+let allRepeaters = [];
+let allBeacons = [];
+
+/* ────────────────────────────────────────────────
+   ÁTJÁTSZÓK BETÖLTÉSE
+   ──────────────────────────────────────────────── */
+
 fetch("repeaters.json")
   .then(r => r.json())
   .then(list => {
     console.log("Betöltött átjátszók:", list.length);
 
-    const markers = L.markerClusterGroup();
-    const allMarkers = [];
+    allRepeaters = [];
 
     // Lokátor duplikátumok
     const locatorGroups = {};
     list.forEach(rep => {
-      if (!locatorGroups[rep.locator]) {
-        locatorGroups[rep.locator] = [];
-      }
+      if (!locatorGroups[rep.locator]) locatorGroups[rep.locator] = [];
       locatorGroups[rep.locator].push(rep);
     });
 
     list.forEach(rep => {
-      // Lokátorból koordináta
       let { lat, lon } = locatorToLatLon(rep.locator);
-      if (!lat || !lon || isNaN(lat) || isNaN(lon)) {
-        console.warn("Hibás lokátor:", rep.callsign, rep.locator);
-        return;
-      }
+      if (!lat || !lon || isNaN(lat) || isNaN(lon)) return;
 
       // Duplikált lokátor eltolása
       const group = locatorGroups[rep.locator];
@@ -74,8 +78,8 @@ fetch("repeaters.json")
 
       const isActive = rep.status.toUpperCase() === "ACTIVE";
       const statusHu = isActive
-        ? '<span style="color: #00ff4c;">aktív</span>'
-        : '<span style="color: #ff3b3b;">inaktív</span>';
+        ? '<span style="color:#00ff4c;">aktív</span>'
+        : '<span style="color:#ff3b3b;">inaktív</span>';
 
       const modes = rep.mode.map(m => m.toUpperCase());
       const hasFM = modes.includes("FM") || modes.includes("ANALOG");
@@ -91,94 +95,156 @@ fetch("repeaters.json")
       const ha2toLink = `http://ha2to.orbel.hu/content/repeaters/hu/${rep.callsign}.html`;
 
       const popupHtml = `
-  <div class="popup">
-    
-    <div class="title">
-      <a href="${ha2toLink}" target="_blank">
-        ${rep.callsign}
-      </a>
-    </div>
+        <div class="popup">
+          <div class="title">
+            <a href="${ha2toLink}" target="_blank">${rep.callsign}</a>
+          </div>
 
-    <div class="qth">${rep.qth}</div>
+          <div class="qth">${rep.qth}</div>
 
-    <table>
-      <tr><th>Lokátor:</th><td>${rep.locator}</td></tr>
-      <tr><th>ASL:</th><td>${rep.asl_m} m</td></tr>
-    </table>
+          <table>
+            <tr><th>Lokátor:</th><td>${rep.locator}</td></tr>
+            <tr><th>ASL:</th><td>${rep.asl_m} m</td></tr>
+          </table>
 
-    <hr>
+          <hr>
 
-    <b>Üzemmódok:</b> ${rep.mode.join(", ")}
+          <b>Üzemmódok:</b> ${rep.mode.join(", ")}
 
-    <hr>
+          <hr>
 
-    <table>
-      <tr><th>RX:</th><td>${rep.rx_khz} kHz</td></tr>
-      <tr><th>TX:</th><td>${rep.tx_khz} kHz</td></tr>
-      <tr><th>Shift:</th><td>${rep.shift_khz} kHz</td></tr>
-      ${toneOrCc ? `<tr><th>Tone/CC:</th><td>${toneOrCc}</td></tr>` : ""}
-    </table>
+          <table>
+            <tr><th>RX:</th><td>${rep.rx_khz} kHz</td></tr>
+            <tr><th>TX:</th><td>${rep.tx_khz} kHz</td></tr>
+            <tr><th>Shift:</th><td>${rep.shift_khz} kHz</td></tr>
+            ${toneOrCc ? `<tr><th>Tone/CC:</th><td>${toneOrCc}</td></tr>` : ""}
+          </table>
 
-    ${rep.notes ? `
-      <hr>
-      <b>Megjegyzés:</b>
-      ${rep.notes.replace(/\n/g, "<br>")}
-    ` : ""}
+          ${rep.notes ? `
+            <hr>
+            <b>Megjegyzés:</b>
+            ${rep.notes.replace(/\n/g, "<br>")}
+          ` : ""}
 
-    <hr>
+          <hr>
 
-    <b>Állapot:</b> ${statusHu}
-
-  </div>
-`;
-
+          <b>Állapot:</b> ${statusHu}
+        </div>
+      `;
 
       const marker = L.marker([lat, lon], { icon: pickIcon(rep) }).bindPopup(popupHtml);
 
-      allMarkers.push({ marker, rep });
-      markers.addLayer(marker);
+      allRepeaters.push({ marker, rep });
+      repeaterCluster.addLayer(marker);
     });
 
-    // SZŰRŐ LOGIKA
-    function applyFilters() {
+    map.addLayer(repeaterCluster);
+  });
+
+/* ────────────────────────────────────────────────
+   BEACONS BETÖLTÉSE
+   ──────────────────────────────────────────────── */
+
+fetch("beacons.json")
+  .then(r => r.json())
+  .then(beacons => {
+    console.log("Betöltött jeladók:", beacons.length);
+
+    allBeacons = [];
+
+    beacons.forEach(b => {
+      const { lat, lon } = locatorToLatLon(b.locator);
+      if (!lat || !lon || isNaN(lat) || isNaN(lon)) return;
+
+      const isActive = b.status.toUpperCase().includes("AKT");
+      const icon = isActive ? icons.beacon_active : icons.beacon_inactive;
+
+      const popup = `
+        <div class="popup">
+          <div class="title">${b.callsign}</div>
+          <div class="qth">${b.qth_name}</div>
+
+          <table>
+            <tr><th>Frekvencia:</th><td>${b.frequency_mhz} MHz</td></tr>
+            <tr><th>Lokátor:</th><td>${b.locator}</td></tr>
+            <tr><th>ASL:</th><td>${b.asl_m} m</td></tr>
+            <tr><th>AGL:</th><td>${b.agl_m} m</td></tr>
+            <tr><th>Moduláció:</th><td>${b.modulation}</td></tr>
+            <tr><th>Antenna:</th><td>${b.antenna}</td></tr>
+            <tr><th>Polarizáció:</th><td>${b.polarization}</td></tr>
+            <tr><th>Teljesítmény:</th><td>${b.power_w} W</td></tr>
+            <tr><th>Állapot:</th><td>${b.status}</td></tr>
+            <tr><th>Frissítve:</th><td>${b.last_update}</td></tr>
+          </table>
+        </div>
+      `;
+
+      const marker = L.marker([lat, lon], { icon }).bindPopup(popup);
+
+      allBeacons.push({ marker, b });
+      beaconCluster.addLayer(marker);
+    });
+
+    map.addLayer(beaconCluster);
+  });
+
+/* ────────────────────────────────────────────────
+   SZŰRŐ LOGIKA
+   ──────────────────────────────────────────────── */
+
+function applyFilters() {
+  const showRepeaters = document.getElementById("filterRepeaters").checked;
+  const showBeacons = document.getElementById("filterBeacons").checked;
+
   const showActive = document.getElementById("filterActive").checked;
   const showInactive = document.getElementById("filterInactive").checked;
+
   const showAnalog = document.getElementById("filterAnalog").checked;
   const showDigital = document.getElementById("filterDigital").checked;
 
-  markers.clearLayers();
+  /* Átjátszók szűrése */
+  repeaterCluster.clearLayers();
 
-  allMarkers.forEach(obj => {
-    const rep = obj.rep;
+  if (showRepeaters) {
+    allRepeaters.forEach(obj => {
+      const rep = obj.rep;
 
-    const isActive = rep.status.toUpperCase() === "ACTIVE";
-    const modes = rep.mode.map(m => m.toUpperCase());
-    const isAnalog = modes.includes("FM") || modes.includes("ANALOG");
-    const isDigital = modes.some(m => ["DMR", "C4FM", "DSTAR", "D-STAR", "DIGITAL"].includes(m));
+      const isActive = rep.status.toUpperCase() === "ACTIVE";
+      const modes = rep.mode.map(m => m.toUpperCase());
+      const isAnalog = modes.includes("FM") || modes.includes("ANALOG");
+      const isDigital = modes.some(m => ["DMR", "C4FM", "DSTAR", "D-STAR", "DIGITAL"].includes(m));
 
-    // Aktív / inaktív szűrés
-    if (!isActive && !showInactive) return;
-    if (isActive && !showActive) return;
+      if (!isActive && !showInactive) return;
+      if (isActive && !showActive) return;
 
-    // Analóg / digitális szűrés – HELYES LOGIKA
-    const modeAllowed =
-      (isAnalog && showAnalog) ||
-      (isDigital && showDigital);
+      const modeAllowed =
+        (isAnalog && showAnalog) ||
+        (isDigital && showDigital);
 
-    if (!modeAllowed) return;
+      if (!modeAllowed) return;
 
-    markers.addLayer(obj.marker);
-  });
+      repeaterCluster.addLayer(obj.marker);
+    });
+  }
+
+  /* Jeladók szűrése */
+  beaconCluster.clearLayers();
+
+  if (showBeacons) {
+    allBeacons.forEach(obj => {
+      const b = obj.b;
+
+      const isActive = b.status.toUpperCase().includes("AKT");
+
+      if (!isActive && !showInactive) return;
+      if (isActive && !showActive) return;
+
+      beaconCluster.addLayer(obj.marker);
+    });
+  }
 }
 
-
-    // SZŰRŐ ESEMÉNYEK – az új panelre mutat
-    document.querySelectorAll("#bottomPanel input[type='checkbox']").forEach(cb => {
-      cb.addEventListener("change", applyFilters);
-    });
-
-    map.addLayer(markers);
-  })
-  .catch(err => {
-    console.error("Hiba a JSON betöltésekor:", err);
-  });
+/* Események */
+document.querySelectorAll("#bottomPanel input[type='checkbox']").forEach(cb => {
+  cb.addEventListener("change", applyFilters);
+});
