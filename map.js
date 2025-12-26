@@ -150,7 +150,7 @@ fetch("repeaters.json")
     const isActive = rep.status.toUpperCase() === "ACTIVE";
     const modes = rep.mode.map(m => m.toUpperCase());
     const isAnalog = modes.includes("FM") || modes.includes("ANALOG");
-    const isDigital = modes.some(m => ["DMR", "C4FM", "DSTAR", "DIGITAL"].includes(m));
+    const isDigital = modes.some(m => ["DMR", "C4FM", "DSTAR", "D-STAR", "DIGITAL"].includes(m));
 
     // Aktív / inaktív szűrés
     if (!isActive && !showInactive) return;
