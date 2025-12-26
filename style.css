@@ -21,27 +21,31 @@ html, body {
   width: 80%;
   background: rgba(0, 0, 0, 0.55);
   color: #fff;
-  padding: 14px 20px;
+  padding: 6px 12px;
   border-radius: 8px;
   z-index: 1000;
   backdrop-filter: blur(4px);
-  text-align: center;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
 }
 
-/* Tipográfia */
+/* Fejléc tipográfia – PMR-rel egységesítve */
 .header .title {
-  font-size: 30px;
+  font-size: 16px;
   font-weight: bold;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .header .subtitle,
 .header .source,
 .header .updated,
 .header .support {
-  font-size: 18px;
+  font-size: 12px;
   margin-bottom: 4px;
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 /* Linkek a fejlécben */
@@ -54,8 +58,9 @@ html, body {
   text-decoration: underline;
 }
 
-/* PayPal gomb igazítása */
+/* PayPal gomb igazítása – PMR méret */
 .header .support img {
+  height: 14px;
   vertical-align: middle;
   margin-left: 6px;
 }
@@ -79,10 +84,10 @@ html, body {
   gap: 20px;
 }
 
-/* Jelmagyarázat */
+/* Jelmagyarázat – egységes 12px */
 .legend {
-  font-size: 18px;
-  line-height: 1.4;
+  font-size: 12px;
+  line-height: 1.3;
 }
 
 .legend .dot {
@@ -101,20 +106,46 @@ html, body {
   background: #f44336;
 }
 
-/* Szűrők */
+/* Szűrők – egységes 12px */
 .filters {
-  font-size: 18px;
-  line-height: 1.4;
+  font-size: 12px;
+  line-height: 1.3;
 }
 
 .filters label {
   cursor: pointer;
 }
 
-/* Popup nagyítás – mint a PMR-es térképen */
+/* --- Popup kompakt mobilbarát stílus – PMR-rel egységesítve --- */
+
 .leaflet-popup-content {
-  font-size: 18px;
-  line-height: 1.4;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.leaflet-popup-content .title {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.leaflet-popup-content table {
+  margin-top: 1em;
+}
+
+.leaflet-popup-content-wrapper {
+  max-width: 300px !important;
+}
+
+.leaflet-popup-content table th {
+  white-space: nowrap;
+}
+
+/* Popup táblázat igazítás – hosszú szöveg ne csússzon el */
+.leaflet-popup-content table th,
+.leaflet-popup-content table td {
+  vertical-align: top;
 }
 
 /* Mobilbarát */
