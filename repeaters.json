@@ -665,7 +665,7 @@
   {
     "callsign": "HG8RUA",
     "qth": "Szeged",
-    "locator": "KN06BG75",
+    "locator": "KN06BG75KA",
     "asl_m": 244,
     "rx_khz": "438662.5",
     "tx_khz": "431062.5",
@@ -732,7 +732,7 @@
   {
     "callsign": "HG8RVA",
     "qth": "Kiskunfélegyháza",
-    "locator": "JN96WQ",
+    "locator": "JN96WR23EI",
     "asl_m": 125,
     "rx_khz": "145762.5",
     "tx_khz": "145162.5",
@@ -764,7 +764,7 @@
   {
     "callsign": "HG8RVC",
     "qth": "Szeged",
-    "locator": "KN06BG",
+    "locator": "KN06BG75KA",
     "asl_m": 197,
     "rx_khz": "145662.5",
     "tx_khz": "145062.5",
@@ -780,7 +780,7 @@
   {
     "callsign": "HG8RVD",
     "qth": "Tompa",
-    "locator": "JN96SE",
+    "locator": "JN96SE49RL",
     "asl_m": 158,
     "rx_khz": "145687.5",
     "tx_khz": "145087.5",
@@ -925,7 +925,7 @@
   {
     "callsign": "HG0RUD",
     "qth": "Debrecen",
-    "locator": "KN07TN53",
+    "locator": "KN07TN53HH",
     "asl_m": 185,
     "rx_khz": "438425.0",
     "tx_khz": "430825.0",
@@ -977,7 +977,7 @@
   {
     "callsign": "HG1RUE",
     "qth": "Győr (Nyúl-hegy)",
-    "locator": "JN87TN99",
+    "locator": "JN87TN99AQ",
     "asl_m": 350,
     "rx_khz": "438250.0",
     "tx_khz": "430650.0",
@@ -1063,7 +1063,7 @@
   {
     "callsign": "HG2RUG",
     "qth": "Gerecse",
-    "locator": "JN97FQ92",
+    "locator": "JN97FQ92GH",
     "asl_m": 708,
     "rx_khz": "438662.5",
     "tx_khz": "431062.5",
@@ -1159,7 +1159,7 @@
   {
     "callsign": "HG4RUD",
     "qth": "Velencei-tó (Nadap, Meleg-hegy)",
-    "locator": "JN97HG",
+    "locator": "JN97HG12OB",
     "asl_m": 367,
     "rx_khz": "438237.5",
     "tx_khz": "430637.5",
@@ -1223,7 +1223,7 @@
   {
     "callsign": "HG7RUA",
     "qth": "Érd",
-    "locator": "JN97KK",
+    "locator": "JN97KK60HA",
     "asl_m": 268,
     "rx_khz": "438675.0",
     "tx_khz": "431075.0",
@@ -1241,7 +1241,7 @@
   {
     "callsign": "HG7RUG",
     "qth": "Dobogókő",
-    "locator": "JN97KR82",
+    "locator": "JN97KR82MG",
     "asl_m": 750,
     "rx_khz": "438525.0",
     "tx_khz": "430925.0",
@@ -1433,7 +1433,7 @@
   {
     "callsign": "HG5RUD",
     "qth": "Budapest",
-    "locator": "JN97LM",
+    "locator": "JN97LM53FV",
     "asl_m": 437,
     "rx_khz": "438475.0",
     "tx_khz": "430875.0",
