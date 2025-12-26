@@ -54,24 +54,31 @@
   </div>
 
   <div class="filters">
-    <b>Szűrők</b><br>
+  <b>Szűrők</b>
 
-    <!-- Állapot -->
-    <label><input type="checkbox" id="filterActive" checked> Aktív</label><br>
-    <label><input type="checkbox" id="filterInactive" checked> Inaktív</label><br>
+  <div class="filter-row">
 
-    <hr>
+    <div class="filter-block">
+      <div class="filter-title">Típus</div>
+      <label><input type="checkbox" id="filterRepeaters" checked> Átjátszók</label><br>
+      <label><input type="checkbox" id="filterBeacons" checked> Jeladók</label>
+    </div>
 
-    <!-- Típus -->
-    <label><input type="checkbox" id="filterRepeaters" checked> Átjátszók</label><br>
-    <label><input type="checkbox" id="filterBeacons" checked> Jeladók</label><br>
+    <div class="filter-block">
+      <div class="filter-title">Állapot</div>
+      <label><input type="checkbox" id="filterActive" checked> Aktív</label><br>
+      <label><input type="checkbox" id="filterInactive" checked> Inaktív</label>
+    </div>
 
-    <hr>
+    <div class="filter-block">
+      <div class="filter-title">Üzemmód</div>
+      <label><input type="checkbox" id="filterAnalog" checked> Analóg</label><br>
+      <label><input type="checkbox" id="filterDigital" checked> Digitális</label>
+    </div>
 
-    <!-- Üzemmód (csak átjátszókra) -->
-    <label><input type="checkbox" id="filterAnalog" checked> Analóg</label><br>
-    <label><input type="checkbox" id="filterDigital" checked> Digitális</label>
   </div>
+</div>
+
 </div>
 
 
