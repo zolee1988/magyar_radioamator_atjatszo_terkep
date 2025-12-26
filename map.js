@@ -173,46 +173,60 @@ fetch("beacons.json")
         lon += Math.cos(angle) * offset;
       }
 
+      // Egységesített státuszkezelés (ACTIVE / INACTIVE)
       const isActive = b.status.toUpperCase() === "ACTIVE";
+
+      const statusHu = isActive
+        ? '<span style="color:#00ff4c;">aktív</span>'
+        : '<span style="color:#ff3b3b;">inaktív</span>';
 
       const icon = isActive ? icons.beacon_active : icons.beacon_inactive;
 
       const ha2toLink = `http://ha2to.orbel.hu/content/beacons/hu/${b.callsign}.html`;
 
-const popup = `
-  <div class="popup">
-    <div class="title">
-      <a href="${ha2toLink}" target="_blank">${b.callsign}</a>
-    </div>
+      const popup = `
+        <div class="popup">
+          <div class="title">
+            <a href="${ha2toLink}" target="_blank">${b.callsign}</a>
+          </div>
 
-    <div class="qth">${b.qth_name}</div>
+          <div class="qth">${b.qth_name}</div>
 
-    <table>
-      <tr><th>Lokátor:</th><td>${b.locator}</td></tr>
-      <tr><th>ASL:</th><td>${b.asl_m} m</td></tr>
-      <tr><th>AGL:</th><td>${b.agl_m} m</td></tr>
-    </table>
+          <table>
+            <tr><th>Lokátor:</th><td>${b.locator}</td></tr>
+            <tr><th>ASL:</th><td>${b.asl_m} m</td></tr>
+            <tr><th>AGL:</th><td>${b.agl_m} m</td></tr>
+          </table>
 
-    <hr>
+          <hr>
 
-    <b>Üzemmód:</b> ${b.modulation}
+          <b>Üzemmód:</b> ${b.modulation}
 
-    <hr>
+          <hr>
 
-    <table>
-      <tr><th>Frekvencia:</th><td>${b.frequency_mhz} MHz</td></tr>
-      
-      <tr><th>Antenna:</th><td>${b.antenna}</td></tr>
-      <tr><th>Polarizáció:</th><td>${b.polarization}</td></tr>
-      <tr><th>Teljesítmény:</th><td>${b.power_w} W</td></tr>
-    </table>
+          <table>
+            <tr><th>Frekvencia:</th><td>${b.frequency_mhz} MHz</td></tr>
+            <tr><th>Antenna:</th><td>${b.antenna}</td></tr>
+            <tr><th>Polarizáció:</th><td>${b.polarization}</td></tr>
+            <tr><th>Teljesítmény:</th><td>${b.power_w} W</td></tr>
+          </table>
 
-    <hr>
+          <hr>
 
-    <b>Állapot:</b> ${b.status}<br>
-    <b>Frissítve:</b> ${b.last_update}
-  </div>
-`;
+          <b>Állapot:</b> ${statusHu}<br>
+          <b>Frissítve:</b> ${b.last_update}
+        </div>
+      `;
+
+      const marker = L.marker([lat, lon], { icon }).bindPopup(popup);
+
+      allBeacons.push({ marker, b });
+      beaconCluster.addLayer(marker);
+    });
+
+    map.addLayer(beaconCluster);
+  });
+
 
 
       const marker = L.marker([lat, lon], { icon }).bindPopup(popup);
