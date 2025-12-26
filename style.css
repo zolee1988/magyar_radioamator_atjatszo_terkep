@@ -26,11 +26,10 @@ html, body {
   z-index: 1000;
   backdrop-filter: blur(4px);
 
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-align: left;
+  display: block;      /* flex OFF */
+  text-align: center;  /* középre igazítás */
 }
+
 
 /* Fejléc tipográfia – PMR-rel egységesítve */
 .header .title {
