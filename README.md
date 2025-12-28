@@ -29,5 +29,5 @@ A térkép végleges, élő verziója itt érhető el:
 
 ## Ha szeretnéd támogatni a projektet és a munkámat, PayPal-on tudsz támogatást küldeni:
 
-[![Donate](https://img.shields.io/badge/PayPal-Donate-blue.svg)](https://www.paypal.com/donate/?business=WBPE7H8CM2PEQ&no_recurring=0&currency_code=HUF)
+[![Donate](https://img.shields.io/badge/PayPal-Donate-blue.svg)](https://www.paypal.me/zolikakiss)
 
